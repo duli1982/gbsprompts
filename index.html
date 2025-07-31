@@ -1144,53 +1144,61 @@
          * @param {string} activeSubCategory - The sub-category to display.
          */
         function renderDetailView(activeCategory, activeSubCategory) {
+            if (!promptData) return;
+
             // Render the main prompt content
             promptDisplayArea.innerHTML = '';
             const subCategoryPrompts = promptData[activeCategory][activeSubCategory];
-            
+
             const header = document.createElement('h1');
             header.className = 'text-3xl font-bold mb-8 main-heading';
-            header.innerHTML = `Gemini Prompts for <span class="accent-text">${activeSubCategory}</span>`;
+            header.innerHTML = `Gemini Prompts for <span class=\"accent-text\">${activeSubCategory}</span>`;
             promptDisplayArea.appendChild(header);
 
             subCategoryPrompts.forEach(prompt => {
                 const promptEl = document.createElement('div');
                 promptEl.className = 'mb-8';
                 promptEl.innerHTML = `
-                    <h3 class="text-xl font-semibold mb-2 main-heading">${prompt.title}</h3>
-                    <div class="prompt-display-item p-4 text-gray-700">
+                    <h3 class=\"text-xl font-semibold mb-2 main-heading\">${prompt.title}</h3>
+                    <div class=\"prompt-display-item p-4 text-gray-700\">
                         <p>${prompt.content}</p>
                     </div>
                 `;
                 promptDisplayArea.appendChild(promptEl);
             });
 
-            // Render the quick links sidebar
+            // Render the quick links sidebar - MODIFIED SECTION
             quickLinksSidebar.innerHTML = '';
-            for (const categoryName in promptData) {
-                const categoryTitle = document.createElement('h4');
-                categoryTitle.className = 'font-bold mt-4 mb-2 main-heading';
-                categoryTitle.innerHTML = `Gemini Prompts for <span class="accent-text">${categoryName}</span>`;
-                quickLinksSidebar.appendChild(categoryTitle);
 
-                const subList = document.createElement('ul');
-                for (const subCategoryName in promptData[categoryName]) {
-                    const li = document.createElement('li');
-                    const link = document.createElement('a');
-                    link.href = '#';
-                    link.textContent = subCategoryName;
-                    link.dataset.category = categoryName;
-                    link.dataset.subcategory = subCategoryName;
-                    // Highlight the active link
-                    if (categoryName === activeCategory && subCategoryName === activeSubCategory) {
-                        link.className = 'active font-semibold';
-                    }
-                    li.appendChild(link);
-                    subList.appendChild(li);
+            // Display the title for the current category
+            const categoryTitle = document.createElement('h4');
+            categoryTitle.className = 'font-bold mt-4 mb-2 main-heading';
+            categoryTitle.innerHTML = `Quick Links for <span class=\"accent-text\">${activeCategory}</span>`; // Updated title
+            quickLinksSidebar.appendChild(categoryTitle);
+
+            const subList = document.createElement('ul');
+            // Iterate only through subcategories of the active category
+            for (const subCategoryName in promptData[activeCategory]) {
+                const li = document.createElement('li');
+                const link = document.createElement('a');
+                link.href = '#'; // Keep href as # for SPA navigation
+                link.textContent = subCategoryName;
+                link.dataset.category = activeCategory; // Use activeCategory
+                link.dataset.subcategory = subCategoryName;
+
+                // Highlight the active link
+                if (subCategoryName === activeSubCategory) {
+                    link.className = 'active font-semibold text-blue-600'; // Added a class for better highlighting
+                } else {
+                     link.className = 'block text-gray-600 hover:text-black py-1'; // Ensure non-active links have default styling
                 }
-                quickLinksSidebar.appendChild(subList);
+
+                li.appendChild(link);
+                subList.appendChild(li);
             }
+            quickLinksSidebar.appendChild(subList);
         }
+
 
         // --- NAVIGATION LOGIC ---
         
