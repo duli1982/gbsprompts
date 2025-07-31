@@ -301,60 +301,42 @@
 
         // --- EVENT LISTENERS ---
 
-        // Event listener for the homepage
-        categoryCardsContainer.addEventListener('click', (e) => {
-            const target = e.target;
-            
-            // Handle "See all prompts" button click
-            if (target.classList.contains('see-all-btn')) {
-                const categoryName = target.dataset.category;
-                // Show the first sub-category by default
-                const firstSubCategory = Object.keys(promptData[categoryName])[0];
-                showDetailView(categoryName, firstSubCategory);
-            }
+// 1. homepage card clicks
+categoryCardsContainer.addEventListener('click', (e) => {
+  const target = e.target;
 
-            // Handle clicking on a sub-category link
-            if (target.tagName === 'A' && target.dataset.subcategory) {
-                e.preventDefault();
-                showDetailView(target.dataset.category, target.dataset.subcategory);
-            }
-        });
+  if (target.classList.contains('see-all-btn')) {
+    const categoryName = target.dataset.category;
+    const firstSubCategory = Object.keys(promptData[categoryName])[0];
+    showDetailView(categoryName, firstSubCategory);
+  }
 
-        // Event listener for the detail view's quick links
-        quickLinksSidebar.addEventListener('click', (e) => {
-            if (e.target.tagName === 'A' && e.target.dataset.subcategory) {
-                e.preventDefault();
-                const category = e.target.dataset.category;
-                const subCategory = e.target.dataset.subcategory;
-                renderDetailView(category, subCategory); // Re-render the view
-            }
-        });
+  if (target.tagName === 'A' && target.dataset.subcategory) {
+    e.preventDefault();
+    showDetailView(target.dataset.category, target.dataset.subcategory);
+  }
+});
 
- // Event listener for the detail view's quick links
- quickLinksSidebar.addEventListener('click', (e) => {
-     if (e.target.tagName === 'A' && e.target.dataset.subcategory) {
-         e.preventDefault();
-         const category = e.target.dataset.category;
-         const subCategory = e.target.dataset.subcategory;
-         renderDetailView(category, subCategory); // Re-render the view
-     }
- });
+// 2. sidebar link clicks
+quickLinksSidebar.addEventListener('click', (e) => {
+  if (e.target.tagName === 'A' && e.target.dataset.subcategory) {
+    e.preventDefault();
+    renderDetailView(e.target.dataset.category, e.target.dataset.subcategory);
+  }
+});
 
-+// Live-filter the sidebar list as the user types in the search box
-+quickLinksSearch.addEventListener('input', (e) => {
-+    const term = e.target.value.trim().toLowerCase();
-+    quickLinksSidebar.querySelectorAll('li').forEach((li) => {
-+        const match = li.textContent.toLowerCase().includes(term);
-+        li.classList.toggle('hidden', !match);
-+    });
-+});
- 
- // Event listener for the "Back" button
- backToHomeBtn.addEventListener('click', showHomepage);
+// 3. live filter in sidebar
+quickLinksSearch.addEventListener('input', (e) => {
+  const term = e.target.value.trim().toLowerCase();
+  quickLinksSidebar.querySelectorAll('li').forEach((li) => {
+    li.classList.toggle('hidden', !li.textContent.toLowerCase().includes(term));
+  });
+});
+
+// 4. “back to home”
+backToHomeBtn.addEventListener('click', showHomepage);
 
 
-        // Event listener for the "Back" button
-        backToHomeBtn.addEventListener('click', showHomepage);
 
         // --- INITIAL LOAD ---
         document.addEventListener('DOMContentLoaded', () => {
