@@ -126,9 +126,8 @@
     type="text"
     id="quick-links-search"
     placeholder="🔍 Search links…"
-    class="mb-2 p-2 border border-gray-300 rounded w-full"
-  />
-  <button id="clear-search-btn" class="hidden mb-4 text-sm text-blue-600 hover:underline">Clear search</button>
+    class="mb-4 p-2 border border-gray-300 rounded w-full"
+  />                    
 
 <nav
                         id="quick-links-sidebar"
@@ -161,12 +160,7 @@
         const categoryCardsContainer = document.getElementById('category-cards-container');
         const promptDisplayArea = document.getElementById('prompt-display-area');
         const quickLinksSidebar = document.getElementById('quick-links-sidebar');
-        const quickLinksSearch = document.getElementById('quick-links-search');
-        const clearSearchBtn = document.getElementById('clear-search-btn');
         const backToHomeBtn = document.getElementById('back-to-home-btn');
-
-        let currentCategory = '';
-        let currentSubCategory = '';
 
         // --- RENDER FUNCTIONS ---
 
@@ -283,66 +277,6 @@
             }
         }
 
-        /**
-         * Filters all prompts by a search term and displays results.
-         */
-        function filterAndDisplayPrompts() {
-            const term = quickLinksSearch.value.trim().toLowerCase();
-
-            if (!term) {
-                clearSearchBtn.classList.add('hidden');
-                renderDetailView(currentCategory, currentSubCategory);
-                return;
-            }
-
-            clearSearchBtn.classList.remove('hidden');
-
-            const results = [];
-            for (const category in promptData) {
-                for (const sub in promptData[category]) {
-                    for (const prompt of promptData[category][sub]) {
-                        if (
-                            prompt.title.toLowerCase().includes(term) ||
-                            prompt.content.toLowerCase().includes(term) ||
-                            category.toLowerCase().includes(term) ||
-                            sub.toLowerCase().includes(term)
-                        ) {
-                            results.push({ category, subCategory: sub, ...prompt });
-                        }
-                    }
-                }
-            }
-
-            promptDisplayArea.innerHTML = '';
-            if (results.length === 0) {
-                promptDisplayArea.innerHTML = `<p class="text-gray-500">No results found.</p>`;
-                return;
-            }
-
-            const countInfo = document.createElement('p');
-            countInfo.className = 'text-sm text-gray-500 mb-4';
-            countInfo.textContent = `${results.length} result${results.length !== 1 ? 's' : ''} found`;
-            promptDisplayArea.appendChild(countInfo);
-
-            const escaped = term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-            const regex = new RegExp(escaped, 'gi');
-
-            results.forEach(res => {
-                const promptEl = document.createElement('div');
-                promptEl.className = 'mb-8';
-                const highlightedTitle = res.title.replace(regex, m => `<mark>${m}</mark>`);
-                const highlightedContent = res.content.replace(regex, m => `<mark>${m}</mark>`);
-                promptEl.innerHTML = `
-                    <h3 class="text-xl font-semibold mb-1 main-heading">${highlightedTitle}</h3>
-                    <div class="text-sm text-gray-500 mb-1">${res.category} - ${res.subCategory}</div>
-                    <div class="prompt-display-item p-4 text-gray-700">
-                        <p>${highlightedContent}</p>
-                    </div>
-                `;
-                promptDisplayArea.appendChild(promptEl);
-            });
-        }
-
         // --- NAVIGATION LOGIC ---
         
         /**
@@ -351,14 +285,10 @@
          * @param {string} subCategory - The specific sub-category to show.
          */
         function showDetailView(category, subCategory) {
-            currentCategory = category;
-            currentSubCategory = subCategory;
             renderDetailView(category, subCategory);
             homepageView.classList.add('hidden');
             detailView.classList.remove('hidden');
             detailView.classList.add('fade-in');
-            quickLinksSearch.value = '';
-            clearSearchBtn.classList.add('hidden');
             window.scrollTo(0, 0); // Scroll to top
         }
 
@@ -369,8 +299,6 @@
             detailView.classList.add('hidden');
             homepageView.classList.remove('hidden');
             homepageView.classList.add('fade-in');
-            quickLinksSearch.value = '';
-            clearSearchBtn.classList.add('hidden');
         }
 
         // --- EVENT LISTENERS ---
@@ -400,21 +328,12 @@
                 e.preventDefault();
                 const category = e.target.dataset.category;
                 const subCategory = e.target.dataset.subcategory;
-                currentCategory = category;
-                currentSubCategory = subCategory;
                 renderDetailView(category, subCategory); // Re-render the view
             }
         });
 
         // Event listener for the "Back" button
         backToHomeBtn.addEventListener('click', showHomepage);
-
-        // Search event listeners
-        quickLinksSearch.addEventListener('input', filterAndDisplayPrompts);
-        clearSearchBtn.addEventListener('click', () => {
-            quickLinksSearch.value = '';
-            filterAndDisplayPrompts();
-        });
 
         // --- INITIAL LOAD ---
         document.addEventListener('DOMContentLoaded', () => {
