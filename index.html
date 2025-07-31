@@ -105,10 +105,22 @@
             <p class="max-w-2xl mx-auto text-lg text-gray-500 mt-4">
                 A curated collection of prompts to help you unlock the full potential of Gemini.
             </p>
+            <!-- Search input for filtering prompts -->
+            <div class="mt-6 flex justify-center">
+                <input
+                    type="text"
+                    id="search-input"
+                    placeholder="Search prompts…"
+                    class="p-2 border border-gray-300 rounded w-full max-w-md mr-2"
+                />
+                <button id="clear-search-btn" class="px-4 py-2 bg-gray-200 rounded">Clear</button>
+            </div>
         </header>
         <main class="container mx-auto px-4 sm:px-6 lg:px-8 pb-16">
             <!-- Category cards will be injected here by JavaScript -->
             <div id="category-cards-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+            <!-- Container for search results -->
+            <div id="search-results-container" class="mt-8 space-y-6 hidden"></div>
         </main>
     </div>
 
@@ -158,6 +170,9 @@
         const homepageView = document.getElementById('homepage-view');
         const detailView = document.getElementById('detail-view');
         const categoryCardsContainer = document.getElementById('category-cards-container');
+        const searchResultsContainer = document.getElementById('search-results-container');
+        const searchInput = document.getElementById('search-input');
+        const clearSearchBtn = document.getElementById('clear-search-btn');
         const promptDisplayArea = document.getElementById('prompt-display-area');
         const quickLinksSidebar = document.getElementById('quick-links-sidebar');
         const backToHomeBtn = document.getElementById('back-to-home-btn');
@@ -251,9 +266,9 @@
             });
 
             // Render the quick links sidebar
-            quickLinksSidebar.innerHTML = '';
-            for (const categoryName in promptData) {
-                const categoryTitle = document.createElement('h4');
+        quickLinksSidebar.innerHTML = '';
+        for (const categoryName in promptData) {
+            const categoryTitle = document.createElement('h4');
                 categoryTitle.className = 'font-bold mt-4 mb-2 main-heading';
                 categoryTitle.innerHTML = `Gemini Prompts for <span class="accent-text">${categoryName}</span>`;
                 quickLinksSidebar.appendChild(categoryTitle);
@@ -275,6 +290,66 @@
                 }
                 quickLinksSidebar.appendChild(subList);
             }
+        }
+
+        /**
+         * Filters prompts by a search term and displays the results.
+         */
+        function filterAndDisplayPrompts() {
+            const term = searchInput.value.trim().toLowerCase();
+
+            // If no search term, show category cards and hide results
+            if (!term) {
+                searchResultsContainer.classList.add('hidden');
+                categoryCardsContainer.classList.remove('hidden');
+                return;
+            }
+
+            const results = [];
+            for (const categoryName in promptData) {
+                for (const subCategoryName in promptData[categoryName]) {
+                    const prompts = promptData[categoryName][subCategoryName];
+                    prompts.forEach(p => {
+                        const text = `${categoryName} ${subCategoryName} ${p.title} ${p.content}`.toLowerCase();
+                        if (text.includes(term)) {
+                            results.push({ categoryName, subCategoryName, ...p });
+                        }
+                    });
+                }
+            }
+
+            renderSearchResults(results, term);
+        }
+
+        /**
+         * Renders search results into the page.
+         * @param {Array} results
+         * @param {string} term
+         */
+        function renderSearchResults(results, term) {
+            searchResultsContainer.innerHTML = '';
+            categoryCardsContainer.classList.add('hidden');
+            searchResultsContainer.classList.remove('hidden');
+
+            if (results.length === 0) {
+                searchResultsContainer.innerHTML = `<p class="text-center text-gray-500">No results found</p>`;
+                return;
+            }
+
+            const highlight = str => str.replace(new RegExp(`(${term})`, 'gi'), '<mark>$1</mark>');
+
+            results.forEach(res => {
+                const card = document.createElement('div');
+                card.className = 'prompt-block p-6';
+                card.innerHTML = `
+                    <h3 class="text-xl font-semibold mb-2 main-heading">${highlight(res.title)}</h3>
+                    <p class="text-sm text-gray-500 mb-2">${res.categoryName} / ${res.subCategoryName}</p>
+                    <div class="prompt-display-item p-4 text-gray-700">
+                        <p>${highlight(res.content)}</p>
+                    </div>
+                `;
+                searchResultsContainer.appendChild(card);
+            });
         }
 
         // --- NAVIGATION LOGIC ---
@@ -330,6 +405,13 @@
                 const subCategory = e.target.dataset.subcategory;
                 renderDetailView(category, subCategory); // Re-render the view
             }
+        });
+
+        // Search input handlers
+        searchInput.addEventListener('input', filterAndDisplayPrompts);
+        clearSearchBtn.addEventListener('click', () => {
+            searchInput.value = '';
+            filterAndDisplayPrompts();
         });
 
         // Event listener for the "Back" button
