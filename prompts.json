@@ -1808,7 +1808,7 @@
       ]
     },
 
-   "UX Design": {
+    "UX Design": {
       "User Research": [
         {
           "id": "ux-design-1",
@@ -2174,11 +2174,10 @@
         {
           "id": "career-coaching-7",
           "title": "Act as Accountability Partner",
-          "description": "Receive ongoing support and motivation through regular check-ins, goal setting, progress evaluation, and constructive feedback to stay on track with career objectives.",s
+          "description": "Receive ongoing support and motivation through regular check-ins, goal setting, progress evaluation, and constructive feedback to stay on track with career objectives."
           "content": "Act as an accountability partner focused on supporting and motivating my ongoing career development. Your role will involve regular check-ins to set goals, evaluate progress, and address any challenges or obstacles. You will need to provide constructive feedback, encourage the adoption of productive habits, and celebrate milestones and achievements. The aim is to keep me focused, motivated, and on track to reach my career objectives. You should also help in identifying opportunities for professional growth, such as workshops, courses, or networking events, and encourage a balance between professional development and personal well-being."
         }
       ]
     }
   }
 }
-
