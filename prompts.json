@@ -598,6 +598,7 @@
         {
           "id": "meeting-notes-1",
           "title": "Create Meeting Notes From a Transcript",
+          "description": "Transform raw meeting transcripts into organized, structured notes that capture key decisions, action items, and outcomes for easy reference.",
           "content": "Act as a helpful assistant. Your task is to create concise, organized, and informative meeting notes from a provided [meeting transcript]. These notes should accurately capture the key points, decisions, action items, and any unresolved issues discussed during the meeting. Ensure that the notes are clear and structured in a way that makes them easy to read and reference. Additionally, the notes should include a brief summary or overview of the meeting's main objectives and outcomes for quick reference."
         }
       ],
@@ -605,6 +606,7 @@
         {
           "id": "meeting-notes-2",
           "title": "Summarize Meeting Notes",
+          "description": "Create concise executive summaries of meeting notes that enable non-attendees to quickly understand key outcomes and next steps.",
           "content": "Act as a helpful assistant. Your task is to summarize the key points from [meeting notes]. The summary should be concise yet comprehensive, capturing the essence of the meeting. Your summary should enable someone who wasn't present at the meeting to understand its outcomes and next steps clearly."
         }
       ],
@@ -612,6 +614,7 @@
         {
           "id": "meeting-notes-3",
           "title": "Anonymize Meeting Notes",
+          "description": "Remove sensitive information and personal identifiers from meeting notes while preserving essential content and maintaining confidentiality.",
           "content": "Act as a helpful assistant responsible for handling sensitive information. Your task is to anonymize the [meeting notes] to ensure confidentiality and privacy. Carefully review the notes and remove or alter any names, job titles, company names, or any other specific details that could identify individuals or organizations. Replace these details with generic terms or placeholders as needed. Ensure the notes remain coherent and useful, retaining all key decisions, actions, and insights, while strictly adhering to privacy and data protection policies."
         }
       ],
@@ -619,6 +622,7 @@
         {
           "id": "meeting-notes-4",
           "title": "Create Action Items",
+          "description": "Extract and organize actionable tasks from meeting notes with clear ownership, deadlines, and accountability for effective follow-through.",
           "content": "Act as a helpful assistant. Your task is to distill key points and action items from the provided [meeting notes]. This involves carefully reading through the notes, and identifying the main discussion points, decisions made, and tasks assigned. Create a concise list of action items, ensuring each item is clear and specific. Assign responsible parties and deadlines for each action item. This will help in tracking progress and ensuring accountability. The final list should be organized, easy to understand, and ready for distribution to all meeting participants."
         }
       ],
@@ -626,6 +630,7 @@
         {
           "id": "meeting-notes-5",
           "title": "Create Follow-up Tasks",
+          "description": "Identify and organize follow-up tasks with dependencies, priorities, and timelines to ensure comprehensive post-meeting execution.",
           "content": "Act as a helpful assistant who excels in organizing and planning. Your task is to carefully review the [meeting notes] and identify key action items, decisions, and any follow‑up tasks that need to be addressed. Your responsibility includes creating a detailed list of these tasks and setting deadlines where appropriate. Ensure that each task is clear, specific, and actionable. Additionally, consider any dependencies between tasks and highlight these in your plan. Your goal is to facilitate smooth progress and ensure that all important points from the meeting are acted upon efficiently."
         }
       ],
@@ -633,15 +638,18 @@
         {
           "id": "meeting-notes-6",
           "title": "Draft an Email With a Meeting Summary",
+          "description": "Compose professional summary emails that communicate meeting outcomes, decisions, and action items to stakeholders and team members.",
           "content": "Act as a helpful assistant responsible for drafting emails. Write a concise and informative email that summarizes the key points and action items from [meeting notes]. The email should be structured clearly, beginning with a brief overview of the meeting's purpose and participants. Then, detail the main discussions, decisions made, and any agreed‑upon action items or follow‑up tasks. The tone should be professional yet approachable, ensuring that the email is easy to read and understand. The email should serve as a useful reference for attendees and others who need to be informed about the meeting's outcomes."
         }
       ]
     },
+
     "Performance Reviews": {
       "Suggest Potential Performance Metrics": [
         {
           "id": "performance-reviews-1",
           "title": "Suggest Potential Performance Metrics",
+          "description": "Develop SMART performance metrics that align with organizational goals and accurately measure role-specific contributions and outcomes.",
           "content": "As a performance review expert, it's your responsibility to define and suggest relevant performance metrics for a [position]. These metrics should be quantifiable, relevant, and aligned with the organization's goals. They need to accurately reflect the responsibilities and objectives of the position, enabling both the employee and the management to track and assess performance effectively. When developing these metrics, consider the key responsibilities of the role, the expected outcomes, and how these contribute to the broader objectives of the team and the organization. Metrics may include quality of work, efficiency, teamwork and collaboration, problem‑solving abilities, customer satisfaction rates, project completion rates, adherence to deadlines, innovation and creativity, sales numbers, cost savings, or any other relevant indicators of successful performance in the specific role. Each metric should be clearly defined, measurable, attainable, relevant, and time‑bound (SMART criteria) to ensure they are practical and useful for performance evaluation."
         }
       ],
@@ -649,6 +657,7 @@
         {
           "id": "performance-reviews-2",
           "title": "Suggest KPIs for Measuring a Metric",
+          "description": "Create specific, measurable KPIs that effectively track progress and success for targeted performance metrics with clear implementation guidance.",
           "content": "Act as a performance review expert who specializes in developing Key Performance Indicators (KPIs). Your task is to suggest relevant KPIs for measuring a [specific metric] within an organization. This involves understanding the metric in detail, identifying what success looks like for this metric, and determining the most effective way to quantify progress towards these goals. The KPIs you suggest should be SMART (Specific, Measurable, Achievable, Relevant, Time‑bound), allowing for clear tracking and assessment. Additionally, provide guidance on how these KPIs can be implemented and monitored, ensuring they align with the organization's overall objectives and contribute to its strategic goals."
         }
       ],
@@ -656,6 +665,7 @@
         {
           "id": "performance-reviews-3",
           "title": "Develop Smart Goals for a Team",
+          "description": "Create comprehensive SMART goals for teams that provide clear direction, measurable outcomes, and strategic alignment with organizational objectives.",
           "content": "As a performance review expert, develop SMART goals for a team working in [field]. These goals should be Specific, Measurable, Achievable, Relevant, and Time‑bound. Ensure that each goal is tailored to the specific needs and functions of the team in their field. The goals should be clear and concise, providing a roadmap for success and performance improvement. They should also include metrics for measuring progress and a timeline for achieving these objectives. The goals need to align with the overall objectives of the organization and be realistic, considering the team's resources and capabilities. Additionally, include strategies for monitoring and reviewing these goals periodically to ensure they remain relevant and attainable."
         }
       ],
@@ -663,6 +673,7 @@
         {
           "id": "performance-reviews-4",
           "title": "Benchmark Employee Feedback",
+          "description": "Analyze and compare employee feedback across departments to identify patterns, strengths, and improvement opportunities for strategic decision-making.",
           "content": "Act as a performance review expert. Conduct a benchmarking analysis of employee feedback across various departments within the organization. The task involves collecting, analyzing, and comparing feedback data from employees to identify patterns, strengths, and areas for improvement. Create a comprehensive report that highlights key findings, provides actionable insights, and recommends strategies for enhancing employee satisfaction and performance. Ensure the analysis is objective, data‑driven, and aligns with best practices in employee performance management. The final report should be clear, concise, and useful for decision‑makers in developing effective employee engagement and development plans."
         }
       ],
@@ -670,6 +681,7 @@
         {
           "id": "performance-reviews-5",
           "title": "Identify Skill Gaps in a Review",
+          "description": "Analyze performance reviews to pinpoint specific skill deficiencies and provide actionable recommendations for targeted development programs.",
           "content": "As a Performance Review Expert, your task is to analyze an employee's performance review to identify any skill gaps. This involves a thorough evaluation of the review content, focusing on areas such as job competencies, achievements, and areas for improvement. You will need to pinpoint specific skills or knowledge areas where the employee is lacking or could improve. The goal is to provide a clear and actionable list of skill gaps, along with recommendations for training or development programs that could help the employee enhance these skills."
         }
       ],
@@ -677,6 +689,7 @@
         {
           "id": "performance-reviews-6",
           "title": "Outline Possible Career Paths",
+          "description": "Map comprehensive career progression opportunities with required skills, qualifications, and industry trends for strategic career development planning.",
           "content": "As a performance review expert, your task is to outline possible career paths for a [role]. This should include a comprehensive overview of potential job titles and responsibilities at various stages of their career, from entry‑level to senior positions. Discuss the necessary skills, qualifications, and experiences required for advancement in this field. Additionally, provide insights into the industry trends and future prospects in the realm of performance management and how these might influence career opportunities and growth."
         }
       ],
@@ -684,6 +697,7 @@
         {
           "id": "performance-reviews-7",
           "title": "Set Performance Goals",
+          "description": "Establish realistic, motivating SMART performance goals that align with organizational objectives and drive professional growth and productivity.",
           "content": "Act as a performance review expert. Your task is to set a realistic and motivating performance goal for a [position]. The goal should align with the organization's objectives and the specific responsibilities of the position. It needs to be measurable, achievable, relevant, and time‑bound (SMART). Consider the position's key performance indicators (KPIs), recent performance trends, and any upcoming challenges or opportunities that could impact performance. Provide clear guidelines on how success will be measured and offer actionable steps for achieving these goals. The aim is to foster professional growth and enhance overall productivity."
         }
       ],
@@ -691,15 +705,18 @@
         {
           "id": "performance-reviews-8",
           "title": "Suggest Training Programs for a Skill",
+          "description": "Design comprehensive skill development programs with diverse learning methods, clear objectives, and effectiveness measurement for continuous improvement.",
           "content": "Act as a performance review expert. Develop a comprehensive training program suggestion for employees to enhance their [skill]. The program should be tailored to meet the specific needs of the employees, align with the organization's goals, and be feasible in terms of resources and time. It should include a mix of learning methods such as workshops, online courses, and hands‑on training. Ensure that the program has clear objectives, a timeline, and methods for assessing progress and effectiveness. Also, suggest ways for continuous skill development and reinforcement post‑training."
         }
       ]
     },
+
     "Recruitment": {
       "Understand the Role and Job Market": [
         {
           "id": "recruitment-1",
           "title": "Understand the Role and Job Market",
+          "description": "Analyze roles comprehensively including responsibilities, skills, qualifications, and current market trends with salary benchmarks and demand insights.",
           "content": "Act as a Recruitment Specialist. Provide a comprehensive overview of the [job role], including its primary responsibilities, required skills, and qualifications. Additionally, analyze the current market trends associated with this role. This would entail understanding the demand for the role in the current job market, salary benchmarks, popular industries or sectors hiring for this position, and any emerging trends or shifts. Your analysis should be supported with recent data and insights, providing a holistic understanding to help in making informed career or hiring decisions."
         }
       ],
@@ -707,6 +724,7 @@
         {
           "id": "recruitment-2",
           "title": "Write Job Descriptions",
+          "description": "Create compelling, inclusive job descriptions that attract qualified candidates while clearly communicating role expectations and company culture.",
           "content": "Act as a Recruitment Specialist. Draft a comprehensive job description for the specified [job role]. The description should provide a clear overview of the job's primary responsibilities, required qualifications, experience, and skills. Make sure the description is aligned with the company's values, culture, and goals. Ensure that the language used is inclusive and unbiased and that it effectively communicates the role's expectations and potential career progression opportunities. Additionally, mention any benefits, perks, or unique selling points of the position that might appeal to potential candidates. Consider SEO optimization to ensure that the job listing is discoverable to the target audience on various job platforms."
         }
       ],
@@ -714,6 +732,7 @@
         {
           "id": "recruitment-3",
           "title": "Analyze and Find Potential Gaps in Resumes",
+          "description": "Identify resume inconsistencies, employment gaps, and potential red flags to prepare targeted interview questions and assessments.",
           "content": "Act as a Recruitment Specialist. Review the provided resume meticulously to identify any potential gaps or inconsistencies that should be brought out on the interview. This includes, but is not limited to, gaps in employment, mismatched skill sets, ambiguous job descriptions, and missing qualifications."
         }
       ],
@@ -721,6 +740,7 @@
         {
           "id": "recruitment-4",
           "title": "Come Up With Interview Questions",
+          "description": "Develop comprehensive interview questions that assess technical skills, soft skills, and cultural fit while ensuring legal compliance.",
           "content": "Act as a Recruitment Specialist with expertise in crafting interview questions tailored to assess the right skills and fit for a specific job role. Develop a set of interview questions for the [job role]. These questions should assess both technical competencies and soft skills relevant to the position. Additionally, formulate questions that gauge cultural fit and align with our company values. Ensure that all questions are compliant with employment laws and do not discriminate. Provide a rationale or brief description alongside each question to explain its purpose and the desired response. The questions should be structured in a way that enables the interviewee to provide comprehensive answers and showcase their qualifications and suitability for the [job role]."
         }
       ],
@@ -728,6 +748,7 @@
         {
           "id": "recruitment-5",
           "title": "Draft an Email to a Potential Candidate",
+          "description": "Compose professional, welcoming candidate communications that outline next steps and create positive first impressions of your organization.",
           "content": "Act as a recruitment specialist. Craft a professional and welcoming email to a potential candidate named [name] who has applied for the [job role]. Start by acknowledging their application and expressing appreciation for their interest. Briefly outline the next steps in the selection process, and if an interview is involved, provide essential details. Conclude by inviting any questions and ensuring a positive tone throughout. Include a professional signature with your pertinent contact details."
         }
       ],
@@ -735,6 +756,7 @@
         {
           "id": "recruitment-6",
           "title": "Draft a Reject Email to a Candidate",
+          "description": "Create respectful, empathetic rejection communications that maintain positive candidate experience and protect company reputation.",
           "content": "Act as a recruitment specialist. Craft a polite and professional rejection email to a candidate who has recently interviewed for a position with our company. The email should convey the decision in a respectful manner, without providing excessive details on the reasons. Ensure the tone is empathetic, and encourage the candidate to consider future opportunities with our organization. Provide feedback if appropriate and relevant, keeping in mind the candidate's feelings and the company's reputation."
         }
       ],
@@ -742,6 +764,7 @@
         {
           "id": "recruitment-7",
           "title": "Create an Onboarding Strategy",
+          "description": "Design comprehensive onboarding programs that integrate new hires into company culture while ensuring rapid productivity and engagement.",
           "content": "Act as a recruitment specialist and design an onboarding strategy tailored for [job role]. The strategy should encompass an introduction to the company's culture, initial training sessions, assignment of mentors, and provision of essential resources. Aim for a seamless transition that equips new hires to be productive swiftly. Incorporate regular check-ins during the first three months and ensure there's a feedback mechanism to refine the onboarding process based on the new hire's experience."
         }
       ],
@@ -749,10 +772,12 @@
         {
           "id": "recruitment-8",
           "title": "Draft Post-onboarding Feedback",
+          "description": "Create structured feedback questionnaires to evaluate onboarding effectiveness and identify improvement opportunities for future hires.",
           "content": "Act as a recruitment specialist. Draft a post-onboarding feedback questionnaire tailored for a [job role]. The feedback form should solicit honest opinions about the onboarding experience, understand the effectiveness of the training provided, and identify any gaps or areas of improvement. Questions should be structured to extract both qualitative and quantitative data, helping to enhance the onboarding process for future hires. Ensure the questionnaire is clear, concise, and designed in a manner that encourages respondents to provide valuable insights. Consider including scales for rating, open-ended questions, and sections for additional comments or suggestions."
         }
       ]
     },
+
     "AI-Powered Recruitment": {
       "Resume Analysis & Screening": [
         {
@@ -1941,6 +1966,7 @@
     }
   }
 }
+
 
 
 
