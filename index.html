@@ -301,56 +301,108 @@
             categoryCardsContainer.className = 'grid md:grid-cols-2 lg:grid-cols-3 gap-8';
 
             // Define the desired order and structure of categories and subcategories
+            // Define the desired order and structure of categories and subcategories with descriptions
             const orderedCategories = {
-                "Writing": [
-                    "Creative Writing",
-                    "Technical Writing",
-                    "Email & Communication",
-                    "Summarization & Extraction"
-                ],
-                "Coding": [
-                    "Code Generation",
-                    "Code Explanation",
-                    "Debugging",
-                    "Code Review"
-                ],
-                "Learning": [
-                    "Studying & Exam Prep",
-                    "Language Learning",
-                    "New Skills"
-                ],
-                "Brainstorming": [
-                    "Ideas & Concepts",
-                    "Problem Solving"
-                ],
-                "Fun": [
-                    "Games & Roleplay",
-                    "Creative Exploration"
-                ],
-                "Productivity": [
-                    "Planning & Organization",
-                    "Analysis & Reflection"
-                ],
-                "Specialized": [
-                    "Marketing & Sales",
-                    "Healthcare",
-                    "Legal",
-                    "Finance",
-                    "Education"
-                ]
+                "🎯 Talent & HR Management": {
+                    description: "(For recruiters, hiring managers, and HR professionals)",
+                    subcategories: [
+                        "Recruitment",
+                        "AI-Powered Recruitment",
+                        "Candidate Engagement",
+                        "Sourcing Strategy",
+                        "Interview Preparation",
+                        "Performance Reviews"
+                    ]
+                },
+                "🚀 Career & Job Seeking": {
+                    description: "(For individuals seeking jobs or career growth)",
+                    subcategories: [
+                        "Career Advice",
+                        "Career Coaching",
+                        "Job Search",
+                        "Resume Writing"
+                    ]
+                },
+                "📈 Business & Market Strategy": {
+                    description: "(For business owners, strategists, and managers)",
+                    subcategories: [
+                        "Business Plan",
+                        "Product Management",
+                        "Project Management",
+                        "Research & Market Intelligence",
+                        "Sales",
+                        "Financial Advice",
+                        "Budgeting"
+                    ]
+                },
+                "✍️ Content & Creative": {
+                    description: "(For marketing, design, and content creation)",
+                    subcategories: [
+                        "Branding",
+                        "Graphic Design",
+                        "UX Design",
+                        "Newsletter",
+                        "Course Creation"
+                    ]
+                },
+                "⚙️ Personal & Professional Productivity": {
+                    description: "(For improving individual workflow and focus)",
+                    subcategories: [
+                        "Time Management",
+                        "Daily Scheduling",
+                        "Goal Setting",
+                        "Meeting Notes",
+                        "ADHD",
+                        "Event Planning"
+                    ]
+                },
+                "💻 Technical & Data Skills": {
+                    description: "(For specific software and data-related tasks)",
+                    subcategories: [
+                        "Data Analysis",
+                        "Excel",
+                        "VBA"
+                    ]
+                },
+                "✨ Core Prompting Techniques": {
+                    description: "(Fundamental techniques for interacting with AI models)",
+                    subcategories: [
+                        "Prompting Techniques"
+                    ]
+                },
+                "🤖 Advanced Frameworks & Systems": {
+                    description: "(Complex, multi-step prompts for strategic tasks)",
+                    subcategories: [
+                        "McKinsey-Style Strategic Report",
+                        "Reverse Genius Protocol",
+                        "360° Growth Audit & Acceleration Blueprint",
+                        "Content Creation Framework"
+                    ]
+                }
             };
 
             for (const categoryName in orderedCategories) {
-                if (promptData[categoryName]) { // Check if the category exists in the loaded data
-                    const category = promptData[categoryName];
-                    const orderedSubCategories = orderedCategories[categoryName];
+                const categoryInfo = orderedCategories[categoryName];
+                // Find the matching category in the loaded data based on a simplified name
+                const simplifiedCategoryName = categoryName.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
+                let foundCategoryData = null;
+                for (const dataKey in promptData) {
+                    if (dataKey.replace(/[^a-zA-Z0-9]/g, '').toLowerCase() === simplifiedCategoryName) {
+                        foundCategoryData = promptData[dataKey];
+                        break;
+                    }
+                }
+
+                if (foundCategoryData) {
+                    const orderedSubCategories = categoryInfo.subcategories;
+                    const categoryDescription = categoryInfo.description;
 
                     const card = document.createElement('div');
                     card.className = 'prompt-block flex flex-col';
 
                     let subCategoryLinks = orderedSubCategories.map(subName => {
                         // Only create a link if the subcategory exists in the loaded data
-                        if (category[subName]) {
+                        if (foundCategoryData[subName]) {
                             return `<li><a href="#" class="block py-1.5 text-gray-500" data-category="${categoryName}" data-subcategory="${subName}">→ ${subName}</a></li>`;
                         }
                         return ''; // Return empty string if subcategory not found
@@ -359,6 +411,7 @@
                     card.innerHTML = `
                     <div class="p-6">
                         <h2 class="text-xl font-bold text-center main-heading">Gemini Prompts for <span class="accent-text">${categoryName}</span></h2>
+ <p class="text-gray-600 text-center text-sm mt-1">${categoryDescription}</p>
                     </div>
                     <div class="flex-grow px-6 category-card-list scrollable-list overflow-y-auto">
                         <ul>${subCategoryLinks}</ul>
@@ -367,7 +420,7 @@
                         <button class="see-all-btn w-full py-2.5 rounded-md font-semibold" data-category="${categoryName}">See all prompts →</button>
                     </div>
                 `;
-                categoryCardsContainer.appendChild(card);
+                    categoryCardsContainer.appendChild(card);
                 }
             }
         }
@@ -484,47 +537,17 @@
 
         function renderQuickLinks(activeCategory, activeSubCategory) {
             quickLinksSidebar.innerHTML = '';
+            // Display the detailed category structure directly as text
             for (const categoryName in promptData) {
-                // Only include categories that have subcategories
-                if (Object.keys(promptData[categoryName]).length === 0) {
-                    continue;
-                }
-
                 const categoryTitle = document.createElement('h4');
                 categoryTitle.className = 'font-bold mt-4 mb-2 main-heading';
+                categoryTitle.innerHTML = `**${categoryName.toUpperCase()}**`; // Example formatting
+                quickLinksSidebar.appendChild(categoryTitle); // Add category as a text header
 
-                // Apply text formatting for visual distinction
-                let formattedCategoryName = '';
-                switch (categoryName) {
-                    case 'Writing': formattedCategoryName = `*${categoryName.toUpperCase()}*`; break;
-                    case 'Coding': formattedCategoryName = `**${categoryName.toUpperCase()}**`; break;
-                    case 'Learning': formattedCategoryName = `_${categoryName.toUpperCase()}_`; break;
-                    case 'Brainstorming': formattedCategoryName = `~~${categoryName.toUpperCase()}~~`; break;
-                    case 'Fun': formattedCategoryName = `\`${categoryName.toUpperCase()}\``; break;
-                    case 'Productivity': formattedCategoryName = `***${categoryName.toUpperCase()}***`; break;
-                    case 'Specialized': formattedCategoryName = `___${categoryName.toUpperCase()}___`; break;
-                    default: formattedCategoryName = categoryName.toUpperCase();
-                }
-
-                categoryTitle.innerHTML = `<span class="accent-text">${formattedCategoryName}</span>`;
-                quickLinksSidebar.appendChild(categoryTitle);
-
-                const subList = document.createElement('ul');
-                for (const subCategoryName in promptData[categoryName]) {
+                for (const subCategoryName in promptData[categoryName]) { // Iterate through subcategories
                     const li = document.createElement('li');
                     const link = document.createElement('a');
                     link.href = '#';
-
-                    // Apply text formatting for subcategories
-                    let formattedSubCategoryName = '';
-                    switch (subCategoryName) {
-                        case 'Creative Writing': formattedSubCategoryName = `> ${subCategoryName}`; break;
-                        case 'Technical Writing': formattedSubCategoryName = `- ${subCategoryName}`; break;
-                        case 'Email & Communication': formattedSubCategoryName = `+ ${subCategoryName}`; break;
-                        case 'Summarization & Extraction': formattedSubCategoryName = `_ ${subCategoryName}`; break;
-                        default: formattedSubCategoryName = subCategoryName;
-                    }
-
                     link.textContent = formattedSubCategoryName;
                     link.dataset.category = categoryName;
                     link.dataset.subcategory = subCategoryName;
@@ -533,7 +556,7 @@
                         link.className = 'active font-semibold';
                     }
                     li.appendChild(link);
-                    subList.appendChild(li);
+                    quickLinksSidebar.appendChild(li); // Add subcategory as a text item
                 }
                 quickLinksSidebar.appendChild(subList);
             }
