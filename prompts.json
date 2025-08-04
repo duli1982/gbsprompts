@@ -1808,9 +1808,7 @@
       ]
     },
 
-    {
-  "promptData": {
-    "UX Design": {
+   "UX Design": {
       "User Research": [
         {
           "id": "ux-design-1",
@@ -2183,3 +2181,4 @@
     }
   }
 }
+
