@@ -1,198 +1,227 @@
 {
   "promptData": {
 "TalentAndHRManagement": {
-    "recruitment": [
-      {
-        "id": "recruitment-1",
-        "title": "Understand the Role and Job Market",
-        "description": "Provides a detailed analysis of a specific job role, including its responsibilities, required skills, qualifications, and current market trends.",
-        "content": "Act as a Recruitment Specialist. Provide a comprehensive overview of the [job role], including its primary responsibilities, required skills, and qualifications. Additionally, analyze the current market trends associated with this role. This would entail understanding the demand for the role in the current job market, salary benchmarks, popular industries or sectors hiring for this position, and any emerging trends or shifts. Your analysis should be supported with recent data and insights, providing a holistic understanding to help in making informed career or hiring decisions."
-      },
-      {
-        "id": "recruitment-2",
-        "title": "Write Job Descriptions",
-        "description": "Drafts a comprehensive, inclusive, and SEO-optimized job description for a specified role, aligned with company culture and goals.",
-        "content": "Act as a Recruitment Specialist. Draft a comprehensive job description for the specified [job role]. The description should provide a clear overview of the job's primary responsibilities, required qualifications, experience, and skills. Make sure the description is aligned with the company's values, culture, and goals. Ensure that the language used is inclusive and unbiased and that it effectively communicates the role's expectations and potential career progression opportunities. Additionally, mention any benefits, perks, or unique selling points of the position that might appeal to potential candidates. Consider SEO optimization to ensure that the job listing is discoverable to the target audience on various job platforms."
-      },
-      {
-        "id": "recruitment-3",
-        "title": "Analyze and Find Potential Gaps in Resumes",
-        "description": "Reviews a resume to identify potential gaps, inconsistencies, or red flags to address during an interview.",
-        "content": "Act as a Recruitment Specialist. Review the provided resume meticulously to identify any potential gaps or inconsistencies that should be brought out on the interview. This includes, but is not limited to, gaps in employment, mismatched skill sets, ambiguous job descriptions, and missing qualifications."
-      },
-      {
-        "id": "recruitment-4",
-        "title": "Come Up With Interview Questions",
-        "description": "Generates tailored interview questions to assess technical skills, soft skills, and cultural fit for a specific job role.",
-        "content": "Act as a Recruitment Specialist with expertise in crafting interview questions tailored to assess the right skills and fit for a specific job role. Develop a set of interview questions for the [job role]. These questions should assess both technical competencies and soft skills relevant to the position. Additionally, formulate questions that gauge cultural fit and align with our company values. Ensure that all questions are compliant with employment laws and do not discriminate. Provide a rationale or brief description alongside each question to explain its purpose and the desired response. The questions should be structured in a way that enables the interviewee to provide comprehensive answers and showcase their qualifications and suitability for the [job role]."
-      },
-      {
-        "id": "recruitment-5",
-        "title": "Draft an Email to a Potential Candidate",
-        "description": "Crafts a professional and welcoming email to a candidate after they have applied, outlining the next steps in the hiring process.",
-        "content": "Act as a recruitment specialist. Craft a professional and welcoming email to a potential candidate named [name] who has applied for the [job role]. Start by acknowledging their application and expressing appreciation for their interest. Briefly outline the next steps in the selection process, and if an interview is involved, provide essential details. Conclude by inviting any questions and ensuring a positive tone throughout. Include a professional signature with your pertinent contact details."
-      },
-      {
-        "id": "recruitment-6",
-        "title": "Draft a Reject Email to a Candidate",
-        "description": "Writes a polite, professional, and empathetic rejection email to a candidate who was not selected for a role.",
-        "content": "Act as a recruitment specialist. Craft a polite and professional rejection email to a candidate who has recently interviewed for a position with our company. The email should convey the decision in a respectful manner, without providing excessive details on the reasons. Ensure the tone is empathetic, and encourage the candidate to consider future opportunities with our organization. Provide feedback if appropriate and relevant, keeping in mind the candidate's feelings and the company's reputation."
-      },
-      {
-        "id": "recruitment-7",
-        "title": "Create an Onboarding Strategy",
-        "description": "Designs a complete onboarding strategy for a new hire in a specific role to ensure a smooth and effective transition into the company.",
-        "content": "Act as a recruitment specialist and design an onboarding strategy tailored for [job role]. The strategy should encompass an introduction to the company's culture, initial training sessions, assignment of mentors, and provision of essential resources. Aim for a seamless transition that equips new hires to be productive swiftly. Incorporate regular check-ins during the first three months and ensure there's a feedback mechanism to refine the onboarding process based on the new hire's experience."
-      },
-      {
-        "id": "recruitment-8",
-        "title": "Draft Post-onboarding Feedback",
-        "description": "Creates a feedback questionnaire for new hires to evaluate and improve the company's onboarding process.",
-        "content": "Act as a recruitment specialist. Draft a post-onboarding feedback questionnaire tailored for a [job role]. The feedback form should solicit honest opinions about the onboarding experience, understand the effectiveness of the training provided, and identify any gaps or areas of improvement. Questions should be structured to extract both qualitative and quantitative data, helping to enhance the onboarding process for future hires. Ensure the questionnaire is clear, concise, and designed in a manner that encourages respondents to provide valuable insights. Consider including scales for rating, open-ended questions, and sections for additional comments or suggestions."
-      }
-    ],
-    "aiPoweredRecruitment": [
-      {
-        "id": "ai-recruitment-1",
-        "title": "AI-Powered Resume Analysis & Ranking",
-        "description": "Analyzes and ranks a batch of resumes based on technical fit, experience, and other indicators, while also identifying potential bias.",
-        "content": "You are an AI recruitment specialist with expertise in resume parsing, candidate scoring, and bias detection. Your task is to analyze a batch of resumes for [job role] and provide detailed insights. First, extract key information: skills, experience levels, education, achievements, and career progression patterns. Then, score each candidate on: technical fit (40%), experience relevance (30%), career growth trajectory (20%), and cultural indicators (10%). Identify potential bias in language or requirements that might exclude qualified diverse candidates. Provide a ranked list with detailed reasoning for each score, highlight red flags or exceptional qualities, and suggest interview focus areas for top candidates. Include recommendations for improving the job description to attract better candidates."
-      },
-      {
-        "id": "ai-recruitment-2",
-        "title": "Automated Resume Screening Configuration",
-        "description": "Defines the criteria and logic for an automated resume screening system to process high volumes of applicants efficiently and without bias.",
-        "content": "Act as an AI recruitment systems specialist. Configure an automated resume screening system for [job role] that can process high volumes while maintaining quality. Define screening criteria including: must-have vs. nice-to-have skills, education equivalencies, experience level calculations, keyword matching algorithms, and red flag detection. Create scoring weights for different qualifications and establish pass/fail thresholds. Design quality assurance protocols to regularly audit AI decisions and identify bias patterns. Include candidate feedback mechanisms and appeals processes. Provide system calibration guidelines and performance metrics to track screening accuracy and efficiency improvements."
-      },
-      {
-        "id": "ai-recruitment-3",
-        "title": "DEI-Focused Recruitment Strategy Development",
-        "description": "Analyzes a recruitment process and develops a comprehensive DEI (Diversity, Equity, and Inclusion) strategy to ensure equitable hiring.",
-        "content": "Act as a diversity and inclusion recruitment strategist with expertise in building equitable hiring processes. Analyze our current recruitment approach for [job role] and identify potential bias points throughout the hiring funnel. Develop a comprehensive DEI strategy that includes: unbiased job description writing, diverse sourcing channel recommendations, inclusive interview panel composition, structured interview questions that minimize bias, and metrics to track diversity progress. Provide specific tactics for reaching underrepresented groups, partnerships with diversity-focused organizations, and process modifications to ensure equitable candidate evaluation. Include a 90-day implementation plan with success metrics and accountability measures."
-      },
-      {
-        "id": "ai-recruitment-4",
-        "title": "Bias Detection and Mitigation Framework",
-        "description": "Audits a complete recruitment workflow to detect and eliminate unconscious bias at every stage of the hiring process.",
-        "content": "You are a recruitment bias analyst specializing in identifying and eliminating unconscious bias in hiring processes. Audit our complete recruitment workflow for [job role] to detect bias at each stage: job posting language, sourcing methods, resume screening criteria, interview questions, and decision-making processes. Use AI bias detection tools to analyze historical hiring data for demographic patterns and outcome disparities. Create bias interruption interventions, inclusive language guidelines, and structured evaluation frameworks. Develop training materials for hiring managers on recognizing and countering bias. Include real-time bias alerts for recruitment teams and quarterly bias audit protocols."
-      },
-      {
-        "id": "ai-recruitment-5",
-        "title": "Predictive Hiring Analytics & Success Modeling",
-        "description": "Uses historical hiring data to create a predictive model that identifies key candidate attributes correlating with long-term job success.",
-        "content": "You are a data-driven recruitment analyst specializing in predictive hiring models. Using historical hiring data patterns, create a predictive model for success in [job role]. Analyze factors that correlate with: high performance ratings, long tenure, promotion rates, and cultural fit scores. Identify the top 10 predictive indicators from resume data, interview responses, and assessment scores. Develop a scoring algorithm that weights each factor appropriately. Create early warning signals for potential hiring mistakes and recommend data collection strategies to improve prediction accuracy. Provide actionable insights for hiring managers on which candidate attributes to prioritize and which common hiring biases to avoid."
-      },
-      {
-        "id": "ai-recruitment-6",
-        "title": "Retention-Focused Recruitment Intelligence",
-        "description": "Analyzes hiring and turnover data to create predictive models that help make recruitment decisions focused on long-term employee retention.",
-        "content": "Act as a people analytics specialist focusing on recruitment decisions that impact retention. Analyze historical hiring and turnover data to identify patterns between recruitment sources, interview processes, and long-term employee success. Create predictive models that flag candidates with higher turnover risk during the hiring process. Develop interview questions and assessment criteria specifically designed to predict retention likelihood. Design early career milestone tracking systems to identify at-risk new hires for intervention. Include compensation benchmarking against retention data and onboarding experience optimization based on retention outcomes. Provide actionable insights for hiring managers to make retention-focused hiring decisions and post-hire success tracking frameworks."
-      }
-    ],
-    "candidateEngagement": {
-      "Personalized Outreach": [
+    "Recruitment": {
+      "Understand the Role and Job Market": [
         {
-          "id": "candidate-engagement-1",
-          "title": "Craft Personalized Outreach Messages",
-          "description": "Creates three distinct, personalized outreach messages for a specific candidate profile to spark curiosity and engagement.",
-          "content": "Act as an expert in candidate engagement using psychology and neuroscience. Craft 3 versions of an outreach message for a senior software engineer from Georgia Tech who has led open-source projects and mentors junior developers. Use relevant humor, spark curiosity without mentioning a job, and end with a compelling call to action."
-        },
-        {
-          "id": "candidate-engagement-2",
-          "title": "Generate Engaging Subject Lines",
-          "description": "Generates 10 engaging and intriguing email subject lines tailored to a specific expert who isn't actively job searching.",
-          "content": "Generate 10 subject lines that stand out in an inbox, tailored for an AI/ML expert with research in computer vision. Each should include a single emoji and intrigue someone who isn’t actively job searching."
-        },
-        {
-          "id": "candidate-engagement-3",
-          "title": "Rewrite Outreach Message Tone",
-          "description": "Rewrites an outreach message to be more casual and friendly, focusing on career aspirations instead of job specifics.",
-          "content": "Rewrite this outreach message to incorporate a casual, friendly tone while emphasizing career aspirations rather than job details. Keep it concise and engaging."
-        },
-        {
-          "id": "candidate-engagement-4",
-          "title": "Create a Follow-Up Message",
-          "description": "Creates a gentle follow-up message for a passive candidate, adding new value and humor without being pushy.",
-          "content": "Create a follow-up message for a passive candidate who hasn’t responded yet. Add a new value point and a light touch of humor to maintain engagement without sounding pushy."
+          "id": "recruitment-1",
+          "title": "Understand the Role and Job Market",
+          "content": "Act as a Recruitment Specialist. Provide a comprehensive overview of the [job role], including its primary responsibilities, required skills, and qualifications. Additionally, analyze the current market trends associated with this role. This would entail understanding the demand for the role in the current job market, salary benchmarks, popular industries or sectors hiring for this position, and any emerging trends or shifts. Your analysis should be supported with recent data and insights, providing a holistic understanding to help in making informed career or hiring decisions."
         }
       ],
-      "Referral Strategies": [
+      "Write Job Descriptions": [
         {
-          "id": "candidate-engagement-5",
-          "title": "Create Referral Narratives from Transcripts",
-          "description": "Extracts impactful quotes from a conversation transcript and turns them into concise, powerful narratives for referral outreach.",
-          "content": "Review this conversation transcript and extract the most impactful quotes about our engineering team’s culture and mission. Convert them into 2-3 concise narratives for referral outreach."
-        },
-        {
-          "id": "candidate-engagement-6",
-          "title": "Generate Referral Request Email",
-          "description": "Generates an email template for requesting employee referrals that focuses on storytelling rather than financial incentives.",
-          "content": "Generate an email template to request employee referrals, emphasizing storytelling and the opportunity to help others advance their careers rather than financial incentives."
-        },
-        {
-          "id": "candidate-engagement-7",
-          "title": "Identify Referral Generation Spaces",
-          "description": "Identifies relevant industry events, groups, and online communities to find and engage ideal candidates for referrals.",
-          "content": "Using our 'Tech Enthusiast' persona, identify industry events, professional groups, and online communities where our ideal candidates are active. Provide messaging ideas to engage in these spaces and generate referrals."
-        },
-        {
-          "id": "candidate-engagement-8",
-          "title": "Craft a Referral Request Follow-Up",
-          "description": "Creates a follow-up message to a candidate whose timing wasn't right, transitioning the conversation into a referral request.",
-          "content": "Create a follow-up message to a candidate who liked the opportunity but the timing wasn’t right. Reference our previous discussion, transition naturally into a referral request, and make it easy for them to say yes."
-        }
-      ]
-    },
-    "sourcingStrategy": {
-       "Sourcing Strategy Development": [
-        {
-            "id": "sourcing-strategy-1",
-            "title": "Analyze Target Employers",
-            "description": "Analyzes the top employers for a specific, specialized role in a given location, including job titles and required certifications.",
-            "content": "As a talent acquisition expert specializing in cybersecurity, use the job description below and current industry trends to analyze employers of cybersecurity engineers with cloud security specialization in Washington, D.C. Include job title variations, professional certifications, and educational backgrounds."
-        },
-        {
-            "id": "sourcing-strategy-2",
-            "title": "Identify Niche Sourcing Channels",
-            "description": "Identifies niche professional groups, conferences, and online communities where specialized candidates are active.",
-            "content": "Identify professional associations, key conferences, online communities, and thought leaders relevant to cybersecurity engineers specializing in cloud security."
-        },
-        {
-            "id": "sourcing-strategy-3",
-            "title": "Analyze Candidate Motivations",
-            "description": "Analyzes the primary career motivations and pain points for professionals in a specific field to tailor recruitment efforts.",
-            "content": "Analyze career motivations and pain points for cybersecurity engineers. What factors drive career changes? What work environments and growth opportunities are most attractive to them?"
-        },
-        {
-            "id": "sourcing-strategy-4",
-            "title": "Create a Sourcing Strategy Plan",
-            "description": "Creates a complete sourcing strategy plan for a specific role, including channels, content, and ranked execution steps.",
-            "content": "Based on previous analysis, create a sourcing strategy for cybersecurity engineers in Washington, D.C. Include primary and niche sourcing channels, outreach content recommendations, and execution steps ranked by probability of success."
-        }
-      ]
-    },
-    "interviewPreparation": {
-      "Suggest Behavioral Questions": [
-        {
-          "id": "interview-prep-1",
-          "title": "Suggest Behavioral Questions",
-          "description": "Generates a list of behavioral interview questions for a specific job title to assess past performance and cultural fit.",
-          "content": "Act as an expert in Human Resources, specializing in crafting and evaluating interview questions. Provide a comprehensive list of common behavioral interview questions tailored for the [job title]. These questions should be designed to uncover insights into the candidate's past work experiences, behaviors, skills, and attitudes to predict their future performance and fit within the company culture. Focus on situational and competency‑based questions that encourage candidates to share specific examples from their past. Ensure the questions cover a wide range of competencies and skills relevant to the [job title], such as teamwork, problem‑solving, leadership, and adaptability. Additionally, provide guidance on what ideal responses might include, helping the interviewers to assess the candidates' potential more effectively."
+          "id": "recruitment-2",
+          "title": "Write Job Descriptions",
+          "content": "Act as a Recruitment Specialist. Draft a comprehensive job description for the specified [job role]. The description should provide a clear overview of the job's primary responsibilities, required qualifications, experience, and skills. Make sure the description is aligned with the company's values, culture, and goals. Ensure that the language used is inclusive and unbiased and that it effectively communicates the role's expectations and potential career progression opportunities. Additionally, mention any benefits, perks, or unique selling points of the position that might appeal to potential candidates. Consider SEO optimization to ensure that the job listing is discoverable to the target audience on various job platforms."
         }
       ],
-      "Suggest Scenario-Based Questions": [
+      "Analyze and Find Potential Gaps in Resumes": [
         {
-          "id": "interview-prep-2",
-          "title": "Suggest Scenario-Based Questions",
-          "description": "Creates scenario-based questions to evaluate a candidate's problem-solving and strategic thinking skills for a specific job title.",
-          "content": "Act as an HR expert assistant, tasked with crafting common scenario‑based questions tailored for interviews related to [job title]. These questions should be designed to evaluate the candidates' problem‑solving abilities, their approach to real‑world challenges they may face in the role, and their capacity for strategic thinking. Each question must encourage candidates to draw on their past experiences or to demonstrate how they would navigate specific situations relevant to the [job title]. Ensure that the questions are open‑ended to allow for in‑depth responses and provide insights into the candidate's skills, mindset, and compatibility with the company culture."
+          "id": "recruitment-3",
+          "title": "Analyze and Find Potential Gaps in Resumes",
+          "content": "Act as a Recruitment Specialist. Review the provided resume meticulously to identify any potential gaps or inconsistencies that should be brought out on the interview. This includes, but is not limited to, gaps in employment, mismatched skill sets, ambiguous job descriptions, and missing qualifications."
         }
+      ],
+      "Come Up With Interview Questions": [
+        {
+          "id": "recruitment-4",
+          "title": "Come Up With Interview Questions",
+          "content": "Act as a Recruitment Specialist with expertise in crafting interview questions tailored to assess the right skills and fit for a specific job role. Develop a set of interview questions for the [job role]. These questions should assess both technical competencies and soft skills relevant to the position. Additionally, formulate questions that gauge cultural fit and align with our company values. Ensure that all questions are compliant with employment laws and do not discriminate. Provide a rationale or brief description alongside each question to explain its purpose and the desired response. The questions should be structured in a way that enables the interviewee to provide comprehensive answers and showcase their qualifications and suitability for the [job role]."
+        }
+      ],
+      "Draft an Email to a Potential Candidate": [
+        {
+          "id": "recruitment-5",
+          "title": "Draft an Email to a Potential Candidate",
+          "content": "Act as a recruitment specialist. Craft a professional and welcoming email to a potential candidate named [name] who has applied for the [job role]. Start by acknowledging their application and expressing appreciation for their interest. Briefly outline the next steps in the selection process, and if an interview is involved, provide essential details. Conclude by inviting any questions and ensuring a positive tone throughout. Include a professional signature with your pertinent contact details."
+        }
+      ],
+      "Draft a Reject Email to a Candidate": [
+        {
+          "id": "recruitment-6",
+          "title": "Draft a Reject Email to a Candidate",
+          "content": "Act as a recruitment specialist. Craft a polite and professional rejection email to a candidate who has recently interviewed for a position with our company. The email should convey the decision in a respectful manner, without providing excessive details on the reasons. Ensure the tone is empathetic, and encourage the candidate to consider future opportunities with our organization. Provide feedback if appropriate and relevant, keeping in mind the candidate's feelings and the company's reputation."
+        }
+      ],
+      "Create an Onboarding Strategy": [
+        {
+          "id": "recruitment-7",
+          "title": "Create an Onboarding Strategy",
+          "content": "Act as a recruitment specialist and design an onboarding strategy tailored for [job role]. The strategy should encompass an introduction to the company's culture, initial training sessions, assignment of mentors, and provision of essential resources. Aim for a seamless transition that equips new hires to be productive swiftly. Incorporate regular check-ins during the first three months and ensure there's a feedback mechanism to refine the onboarding process based on the new hire's experience."
+        }
+      ],
+      "Draft Post-onboarding Feedback": [
+        {
+          "id": "recruitment-8",
+          "title": "Draft Post-onboarding Feedback",
+          "content": "Act as a recruitment specialist. Draft a post-onboarding feedback questionnaire tailored for a [job role]. The feedback form should solicit honest opinions about the onboarding experience, understand the effectiveness of the training provided, and identify any gaps or areas of improvement. Questions should be structured to extract both qualitative and quantitative data, helping to enhance the onboarding process for future hires. Ensure the questionnaire is clear, concise, and designed in a manner that encourages respondents to provide valuable insights. Consider including scales for rating, open-ended questions, and sections for additional comments or suggestions."
+        }
+      ],
+    "AI-Powered Recruitment": {
+      "Resume Analysis & Screening": [
+        {
+          "id": "ai-recruitment-1",
+          "title": "AI-Powered Resume Analysis & Ranking",
+          "content": "You are an AI recruitment specialist with expertise in resume parsing, candidate scoring, and bias detection. Your task is to analyze a batch of resumes for [job role] and provide detailed insights. First, extract key information: skills, experience levels, education, achievements, and career progression patterns. Then, score each candidate on: technical fit (40%), experience relevance (30%), career growth trajectory (20%), and cultural indicators (10%). Identify potential bias in language or requirements that might exclude qualified diverse candidates. Provide a ranked list with detailed reasoning for each score, highlight red flags or exceptional qualities, and suggest interview focus areas for top candidates. Include recommendations for improving the job description to attract better candidates."
+        },
+        {
+          "id": "ai-recruitment-2",
+          "title": "Automated Resume Screening Configuration",
+          "content": "Act as an AI recruitment systems specialist. Configure an automated resume screening system for [job role] that can process high volumes while maintaining quality. Define screening criteria including: must-have vs. nice-to-have skills, education equivalencies, experience level calculations, keyword matching algorithms, and red flag detection. Create scoring weights for different qualifications and establish pass/fail thresholds. Design quality assurance protocols to regularly audit AI decisions and identify bias patterns. Include candidate feedback mechanisms and appeals processes. Provide system calibration guidelines and performance metrics to track screening accuracy and efficiency improvements."
+        }
+      ],
+      "Diversity & Inclusion": [
+        {
+          "id": "ai-recruitment-3",
+          "title": "DEI-Focused Recruitment Strategy Development",
+          "content": "Act as a diversity and inclusion recruitment strategist with expertise in building equitable hiring processes. Analyze our current recruitment approach for [job role] and identify potential bias points throughout the hiring funnel. Develop a comprehensive DEI strategy that includes: unbiased job description writing, diverse sourcing channel recommendations, inclusive interview panel composition, structured interview questions that minimize bias, and metrics to track diversity progress. Provide specific tactics for reaching underrepresented groups, partnerships with diversity-focused organizations, and process modifications to ensure equitable candidate evaluation. Include a 90-day implementation plan with success metrics and accountability measures."
+        },
+        {
+          "id": "ai-recruitment-4",
+          "title": "Bias Detection and Mitigation Framework",
+          "content": "You are a recruitment bias analyst specializing in identifying and eliminating unconscious bias in hiring processes. Audit our complete recruitment workflow for [job role] to detect bias at each stage: job posting language, sourcing methods, resume screening criteria, interview questions, and decision-making processes. Use AI bias detection tools to analyze historical hiring data for demographic patterns and outcome disparities. Create bias interruption interventions, inclusive language guidelines, and structured evaluation frameworks. Develop training materials for hiring managers on recognizing and countering bias. Include real-time bias alerts for recruitment teams and quarterly bias audit protocols."
+        }
+      ],
+      "Predictive Analytics": [
+        {
+          "id": "ai-recruitment-5",
+          "title": "Predictive Hiring Analytics & Success Modeling",
+          "content": "You are a data-driven recruitment analyst specializing in predictive hiring models. Using historical hiring data patterns, create a predictive model for success in [job role]. Analyze factors that correlate with: high performance ratings, long tenure, promotion rates, and cultural fit scores. Identify the top 10 predictive indicators from resume data, interview responses, and assessment scores. Develop a scoring algorithm that weights each factor appropriately. Create early warning signals for potential hiring mistakes and recommend data collection strategies to improve prediction accuracy. Provide actionable insights for hiring managers on which candidate attributes to prioritize and which common hiring biases to avoid."
+        },
+        {
+          "id": "ai-recruitment-6",
+          "title": "Retention-Focused Recruitment Intelligence",
+          "content": "Act as a people analytics specialist focusing on recruitment decisions that impact retention. Analyze historical hiring and turnover data to identify patterns between recruitment sources, interview processes, and long-term employee success. Create predictive models that flag candidates with higher turnover risk during the hiring process. Develop interview questions and assessment criteria specifically designed to predict retention likelihood. Design early career milestone tracking systems to identify at-risk new hires for intervention. Include compensation benchmarking against retention data and onboarding experience optimization based on retention outcomes. Provide actionable insights for hiring managers to make retention-focused hiring decisions and post-hire success tracking frameworks."
+        }
+      ],
+      "Process Automation": [
+        {
+          "id": "ai-recruitment-7",
+          "title": "Intelligent Interview Process Automation",
+          "content": "Act as a recruitment operations specialist focused on interview process optimization. Design an automated interview coordination system for [company type] that handles: candidate availability collection, interviewer calendar integration, room/video link booking, automated reminder sequences, and rescheduling workflows. Create template communications for each stage: initial scheduling, confirmations, reminders, and follow-ups. Include fallback procedures for scheduling conflicts and last-minute changes. Develop metrics to track scheduling efficiency, candidate experience scores, and interviewer satisfaction. Provide implementation guidelines for integrating with existing ATS and calendar systems, including ROI calculations and change management strategies."
+        },
+        {
+          "id": "ai-recruitment-8",
+          "title": "High-Volume Hiring Process Automation",
+          "content": "You are a recruitment automation expert specializing in high-volume hiring scenarios. Design an automated recruitment system for hiring [number] candidates for [role type] within [timeframe]. Create workflows for: automated resume screening with AI scoring, bulk communication sequences, interview slot auto-booking, assessment distribution and grading, and offer generation processes. Develop quality control checkpoints to maintain hiring standards at scale. Include candidate pool management strategies, bottleneck identification systems, and capacity planning frameworks. Design reporting dashboards for real-time hiring progress tracking and resource allocation optimization. Provide cost-per-hire reduction strategies and quality maintenance protocols."
+        }
+      ],
+      "Candidate Experience": [
+        {
+          "id": "ai-recruitment-9",
+          "title": "AI-Powered Candidate Experience Optimization",
+          "content": "You are a candidate experience specialist using AI insights to optimize the recruitment journey. Map the complete candidate experience from job discovery to offer acceptance, identifying pain points and optimization opportunities. Analyze: application completion rates, response times, communication effectiveness, and candidate feedback patterns. Design personalized communication sequences based on candidate type, seniority level, and source channel. Create automated touchpoints that maintain engagement without overwhelming candidates. Develop a scoring system for candidate experience quality and implement real-time feedback collection. Include chatbot conversation flows for common candidate questions and escalation protocols for complex issues. Provide A/B testing frameworks for continuous improvement."
+        },
+        {
+          "id": "ai-recruitment-10",
+          "title": "Recruitment Chatbot Development",
+          "content": "Act as a conversational AI specialist for recruitment. Design an intelligent recruitment chatbot that can handle candidate inquiries, pre-screening questions, and application guidance. Create conversation flows for: job information requests, application status updates, interview preparation guidance, company culture questions, and technical requirement clarifications. Develop natural language processing capabilities to understand candidate intent and provide relevant responses. Include escalation triggers for complex questions requiring human intervention. Design integration protocols with ATS systems for real-time data access. Provide training datasets, conversation analytics, and continuous improvement frameworks to enhance chatbot effectiveness."
+        }
+      ],
+      "Skills-Based Hiring": [
+        {
+          "id": "ai-recruitment-11",
+          "title": "Skills-Based Hiring Framework Development",
+          "content": "Act as a competency-based recruitment expert specializing in skills-first hiring approaches. Move beyond traditional degree and experience requirements to focus on demonstrable skills for [job role]. Create a comprehensive skills taxonomy including: core technical abilities, soft skills, learning agility indicators, and growth potential markers. Design practical skill assessments, portfolio review frameworks, and competency-based interview questions. Develop scoring rubrics that weight skills appropriately and identify transferable abilities from non-traditional backgrounds. Include bias reduction strategies and alternative credential recognition systems. Provide implementation guidance for hiring managers resistant to skills-based approaches and metrics to measure hiring quality improvements."
+        },
+        {
+          "id": "ai-recruitment-12",
+          "title": "AI-Powered Skills Assessment Design",
+          "content": "You are a talent assessment specialist focused on AI-driven skills evaluation. Design comprehensive skills assessments for [job role] that go beyond traditional testing methods. Create multi-modal assessments including: coding challenges with automated evaluation, scenario-based problem solving, collaborative simulation exercises, and real-world project portfolios. Develop AI scoring algorithms that evaluate not just correctness but also approach, creativity, and problem-solving methodology. Include adaptive testing that adjusts difficulty based on candidate responses. Design bias-free assessment criteria and provide alternative formats for different learning styles and accessibility needs. Create candidate feedback systems and assessment validity tracking protocols."
+        }
+      ],
+      "Remote & Virtual Hiring": [
+        {
+          "id": "ai-recruitment-13",
+          "title": "Remote-First Recruitment Process Design",
+          "content": "Act as a remote hiring specialist with expertise in virtual recruitment processes. Design a comprehensive remote hiring framework that maintains quality while scaling efficiently. Address: virtual interview best practices, remote onboarding workflows, digital assessment tools, time zone coordination strategies, and cultural fit evaluation methods for distributed teams. Create technology stack recommendations for video interviewing, collaborative assessments, and virtual office tours. Develop scripts and training materials for hiring managers new to remote interviewing. Include candidate experience optimization for remote processes and strategies for evaluating remote work capabilities. Provide implementation timelines, cost analysis, and success metrics."
+        },
+        {
+          "id": "ai-recruitment-14",
+          "title": "Virtual Reality Recruitment Experiences",
+          "content": "You are a recruitment technology innovator specializing in immersive candidate experiences. Design VR-based recruitment experiences for [job role] that allow candidates to experience realistic work scenarios. Create virtual office tours, team collaboration simulations, and job-specific skill demonstrations. Develop assessment criteria for VR-based evaluations and integration protocols with traditional hiring processes. Include accessibility considerations and alternative options for candidates without VR access. Design candidate feedback collection systems and effectiveness measurement frameworks. Provide implementation guidelines, technology requirements, and ROI analysis for VR recruitment investments."
+        }
+      ],
+      "Recruitment Marketing": [
+        {
+          "id": "ai-recruitment-15",
+          "title": "Data-Driven Recruitment Marketing Strategy",
+          "content": "You are a recruitment marketing strategist specializing in employer brand optimization and candidate attraction. Analyze our current employer brand perception using social media sentiment, review site analysis, and competitor positioning research. Develop a comprehensive recruitment marketing strategy including: targeted content creation for different candidate personas, social media campaign optimization, employee advocacy program development, and conversion funnel optimization from awareness to application. Create content calendars, messaging frameworks, and channel-specific strategies for LinkedIn, GitHub, industry forums, and job boards. Include influencer partnership strategies with current employees and industry thought leaders. Provide ROI measurement frameworks and optimization recommendations."
+        },
+        {
+          "id": "ai-recruitment-16",
+          "title": "AI-Powered Talent Pipeline Development",
+          "content": "Act as a talent pipeline strategist using AI to build and maintain candidate relationships. Design a system that identifies and nurtures potential candidates before they're actively job searching. Create automated engagement sequences for different candidate segments: passive prospects, industry contacts, former applicants, and referral network connections. Develop content personalization algorithms based on candidate interests, career stage, and engagement patterns. Include lead scoring systems to prioritize outreach efforts and predictive models to identify when passive candidates might be ready to move. Design integration protocols with CRM systems and provide measurement frameworks for pipeline quality and conversion rates."
+        }
+      ],
+    "Candidate Engagement": {
+        "Personalized Outreach": [
+            { "id": "candidate-engagement-1", "title": "Craft Personalized Outreach Messages", "content": "Act as an expert in candidate engagement using psychology and neuroscience. Craft 3 versions of an outreach message for a senior software engineer from Georgia Tech who has led open-source projects and mentors junior developers. Use relevant humor, spark curiosity without mentioning a job, and end with a compelling call to action." },
+            { "id": "candidate-engagement-2", "title": "Generate Engaging Subject Lines", "content": "Generate 10 subject lines that stand out in an inbox, tailored for an AI/ML expert with research in computer vision. Each should include a single emoji and intrigue someone who isn’t actively job searching." },
+            { "id": "candidate-engagement-3", "title": "Rewrite Outreach Message Tone", "content": "Rewrite this outreach message to incorporate a casual, friendly tone while emphasizing career aspirations rather than job details. Keep it concise and engaging." },
+            { "id": "candidate-engagement-4", "title": "Create a Follow-Up Message", "content": "Create a follow-up message for a passive candidate who hasn’t responded yet. Add a new value point and a light touch of humor to maintain engagement without sounding pushy." }
+        ],
+        "Referral Strategies": [
+            { "id": "candidate-engagement-5", "title": "Create Referral Narratives from Transcripts", "content": "Review this conversation transcript and extract the most impactful quotes about our engineering team’s culture and mission. Convert them into 2-3 concise narratives for referral outreach." },
+            { "id": "candidate-engagement-6", "title": "Generate Referral Request Email", "content": "Generate an email template to request employee referrals, emphasizing storytelling and the opportunity to help others advance their careers rather than financial incentives." },
+            { "id": "candidate-engagement-7", "title": "Identify Referral Generation Spaces", "content": "Using our 'Tech Enthusiast' persona, identify industry events, professional groups, and online communities where our ideal candidates are active. Provide messaging ideas to engage in these spaces and generate referrals." },
+            { "id": "candidate-engagement-8", "title": "Craft a Referral Request Follow-Up", "content": "Create a follow-up message to a candidate who liked the opportunity but the timing wasn’t right. Reference our previous discussion, transition naturally into a referral request, and make it easy for them to say yes." }
+        ],
+        "Pre-Screening Process": [
+            { "id": "candidate-engagement-9", "title": "Generate Screening Questions", "content": "Using the attached job description and hiring manager notes, generate a set of behavioral and technical screening questions that assess key role competencies and culture fit." },
+            { "id": "candidate-engagement-10", "title": "Develop a Scoring Rubric", "content": "Develop a structured scoring rubric for pre-screening responses, outlining what constitutes strong, adequate, and concerning answers." },
+            { "id": "candidate-engagement-11", "title": "Provide Sample Responses", "content": "Provide sample responses at three levels—highly qualified, moderately qualified, and underqualified—based on these screening questions." },
+            { "id": "candidate-engagement-12", "title": "Analyze Transcripts for Success Predictors", "content": "Analyze recent pre-screening interview transcripts and identify patterns in responses that indicate strong predictors of success. Recommend adjustments to screening questions based on insights." },
+            { "id": "candidate-engagement-13", "title": "Modify Screening Questions for Collaboration", "content": "Modify these screening questions to emphasize collaborative problem-solving while maintaining technical assessment components, ensuring alignment with our team’s culture." }
+        ],
+      "Sourcing Strategy": {
+    "Sourcing Strategy Development": [
+        { "id": "sourcing-strategy-1", "title": "Analyze Target Employers", "content": "As a talent acquisition expert specializing in cybersecurity, use the job description below and current industry trends to analyze employers of cybersecurity engineers with cloud security specialization in Washington, D.C. Include job title variations, professional certifications, and educational backgrounds." },
+        { "id": "sourcing-strategy-2", "title": "Identify Niche Sourcing Channels", "content": "Identify professional associations, key conferences, online communities, and thought leaders relevant to cybersecurity engineers specializing in cloud security." },
+        { "id": "sourcing-strategy-3", "title": "Analyze Candidate Motivations", "content": "Analyze career motivations and pain points for cybersecurity engineers. What factors drive career changes? What work environments and growth opportunities are most attractive to them?" },
+        { "id": "sourcing-strategy-4", "title": "Create a Sourcing Strategy Plan", "content": "Based on previous analysis, create a sourcing strategy for cybersecurity engineers in Washington, D.C. Include primary and niche sourcing channels, outreach content recommendations, and execution steps ranked by probability of success." }
+    ],
+    "Hiring Manager Collaboration": [
+        { "id": "sourcing-strategy-5", "title": "Develop Hiring Manager Alignment Guide", "content": "Help me develop a hiring manager alignment guide for ML engineer roles in Amsterdam. Include key intake questions covering role responsibilities, required vs. preferred skills, success metrics, team dynamics, and business impact." },
+        { "id": "sourcing-strategy-6", "title": "Create a Requirements Validation Framework", "content": "Develop a structured requirements validation framework. Identify potential misalignments in skills requested versus market availability, clarify deal-breakers vs. flexible requirements, and recommend adjustments." },
+        { "id": "sourcing-strategy-7", "title": "Analyze Job Description Change Impact", "content": "Create a requirement change impact analysis for an evolving job description. Assess impacts on hiring timeline, candidate pipeline, and sourcing strategy." },
+        { "id": "sourcing-strategy-8", "title": "Role-Play: Overcoming Hiring Manager Bias", "content": "Simulate an interactive role-play where I act as a recruiter and you play a hiring manager hesitant to interview candidates from non-traditional backgrounds. Provide feedback on my approach and suggest alternative strategies." },
+        { "id": "sourcing-strategy-9", "title": "Interactive Role-Play: Persuading a Resistant HM", "content": "Let's engage in an interactive role play where you will play the role of a strategic technical recruiter and I will play the role of a hiring manager for a sales engineer position. I believe that only candidates with specific industry experience can succeed, though it's not a formal requirement. You're having difficulty finding candidates with my desired industry experience and feel you are finding well qualified candidates that meet the requirements. I will be resistant, raising common objections about risk, ramp time, and domain knowledge and wonder why you just can't find me the candidates I want. No matter how difficult I become, be infinitely patient and respectful and be logical and persuasive in your reasoning to reach a mutually acceptable resolution. After our role play, please provide a breakdown of the techniques you used, explaining why you chose certain approaches and how they helped overcome specific objections. Feel free to pause the roleplay at critical points if you want to explain or elaborate on your reasoning." }
+    ],
+    "Talent Search Optimization": [
+        { "id": "sourcing-strategy-10", "title": "Generate Inclusive Boolean Search String", "content": "Act as an expert-level sourcer and generate a maximally inclusive Boolean search string for forklift operators. Ensure variations of key terms, verb forms, alternative job titles, and implicit search terms are included." },
+        { "id": "sourcing-strategy-11", "title": "Review Boolean String for Bias", "content": "Analyze this Boolean search string for potential bias or exclusions. Consider regional terminology, industry vocabulary, and non-traditional career paths. Suggest modifications to improve inclusivity and relevance." },
+        { "id": "sourcing-strategy-12", "title": "Create a GitHub Sourcing Guide", "content": "Provide step-by-step instructions for sourcing software developers on GitHub using both GitHub search functionality and Google X-Ray search." },
+        { "id": "sourcing-strategy-13", "title": "Plan Sourcing for Hard-to-Fill Roles", "content": "Generate a targeted sourcing plan for a hard-to-fill role. Identify niche communities, alternative job titles, and adjacent skills that could expand the talent pool." },
+        { "id": "sourcing-strategy-14", "title": "Identify Non-Obvious Talent Pools", "content": "Help me identify non-obvious talent pools for data analyst roles by analyzing: 1) Adjacent roles with transferable skills, 2) Industries with similar technical requirements, 3) Academic or certification paths that develop relevant capabilities, 4) Career transition patterns into this role. Explain how each pool connects to the required skills." }
+    ],
+    "Candidate-Job Matching": [
+        { "id": "sourcing-strategy-15", "title": "Create a Skills-Based Evaluation Matrix", "content": "Using the attached job description, create an objective skills-based evaluation matrix for ML engineers. Include technical competencies, project experience criteria, and transferable skills considerations." },
+        { "id": "sourcing-strategy-16", "title": "Expand Job Title and Skill Search Terms", "content": "Please consider all possible job titles for this role. Include any alternative terms that people might use for required skills. Include any related technologies or tools that might indicate relevant experience. If applicable, include industry terms and/or companies that typically develop this talent. Enhance the search with implicit skill indicators, company-based targeting logic, and career progression markers, and explain the value each addition brings." },
+        { "id": "sourcing-strategy-17", "title": "Compare Candidate Profiles to Framework", "content": "Compare three anonymized candidate profiles against this evaluation framework. Focus on skill alignment, project experience, and potential development areas while maintaining strict objectivity." },
+        { "id": "sourcing-strategy-18", "title": "Identify Alternative Candidate Qualifications", "content": "Identify alternative experiences or skill combinations that could demonstrate capability in ML engineering. Consider adjacent skills, relevant projects, and non-traditional learning paths." },
+        { "id": "sourcing-strategy-19", "title": "Review Evaluation Framework for Bias", "content": "Review this candidate evaluation framework for bias. Suggest adjustments to ensure all backgrounds and career pathways are fairly considered while maintaining core competency focus." }
+    ],
+    "Interview Preparation": {
+    "Suggest Behavioral Questions": [
+      {
+        "id": "interview-prep-1",
+        "title": "Suggest Behavioral Questions",
+        "content": "Act as an expert in Human Resources, specializing in crafting and evaluating interview questions. Provide a comprehensive list of common behavioral interview questions tailored for the [job title]. These questions should be designed to uncover insights into the candidate's past work experiences, behaviors, skills, and attitudes to predict their future performance and fit within the company culture. Focus on situational and competency‑based questions that encourage candidates to share specific examples from their past. Ensure the questions cover a wide range of competencies and skills relevant to the [job title], such as teamwork, problem‑solving, leadership, and adaptability. Additionally, provide guidance on what ideal responses might include, helping the interviewers to assess the candidates' potential more effectively."
+      }
+    ],
+    "Suggest Scenario-Based Questions": [
+      {
+        "id": "interview-prep-2",
+        "title": "Suggest Scenario-Based Questions",
+        "content": "Act as an HR expert assistant, tasked with crafting common scenario‑based questions tailored for interviews related to [job title]. These questions should be designed to evaluate the candidates' problem‑solving abilities, their approach to real‑world challenges they may face in the role, and their capacity for strategic thinking. Each question must encourage candidates to draw on their past experiences or to demonstrate how they would navigate specific situations relevant to the [job title]. Ensure that the questions are open‑ended to allow for in‑depth responses and provide insights into the candidate's skills, mindset, and compatibility with the company culture."
+      }
       ],
       "Answer Tell Me About Yourself Question": [
         {
           "id": "interview-prep-3",
           "title": "Answer Tell Me About Yourself Question",
-          "description": "Crafts a compelling and strategic answer to the 'Tell me about yourself' interview question based on a candidate's profile.",
           "content": "Act as an expert on nailing job interviews, specializing in crafting compelling personal narratives. Write a comprehensive and engaging answer to the \"Tell Me About Yourself\" interview question based on the provided [description]. Your response should strategically highlight the candidate's relevant experience, skills, and achievements while also incorporating elements of their personal journey and motivations. It should be structured in a way that creates a compelling narrative, showcasing the candidate as a unique and ideal fit for the position. Ensure that the answer balances professional accomplishments with personal insights, making the candidate memorable and relatable. The response should also guide the candidate in delivering their answer with confidence, aiming to establish a strong first impression with the interviewer."
         }
       ],
@@ -200,10 +229,80 @@
         {
           "id": "interview-prep-4",
           "title": "Discuss Strengths and Weaknesses",
-          "description": "Provides a guide on how to strategically discuss strengths and weaknesses in a job interview, with examples.",
           "content": "Act as an expert on nailing job interviews, prepare a comprehensive guide on discussing [strengths and weaknesses] during a job interview. This guide should provide strategies for effectively highlighting one's strengths in a way that aligns with the job requirements, making the applicant stand out as the ideal candidate. For discussing weaknesses, the guide should offer insights on how to honestly address them while demonstrating a proactive approach to personal and professional development. Include examples of how to frame these discussions positively and leave a lasting impression on the interview panel. The guide should also cover the importance of self‑awareness and the balance between confidence and humility."
         }
-      ]
+      ],
+      "Discuss Career Goals": [
+        {
+          "id": "interview-prep-5",
+          "title": "Discuss Career Goals",
+          "content": "As an expert on nailing job interviews, your task is to craft a compelling and strategic response that describes your [career goals] during a job interview. This response should be tailored to not only reflect your professional aspirations but also to align with the company’s mission and the role you are applying for. Your answer should demonstrate ambition, clarity, and a forward‑thinking mindset. It must encapsulate short‑term goals that lead towards a larger, long‑term vision, showcasing how this role is a crucial step in your career path. Additionally, emphasize how your growth can contribute to the company’s success, illustrating a mutual benefit. Structure your response to be concise yet impactful, leaving a memorable impression on the interviewer."
+        }
+      ],
+      "Research Specific Industry": [
+        {
+          "id": "interview-prep-6",
+          "title": "Research Specific Industry",
+          "content": "Act as an expert on nailing job interviews with a focus on [specific industry]. Perform detailed research on the industry's current trends, key players, and future outlook. Prepare a comprehensive overview that includes insights on the industry's challenges, opportunities, and the skills that are highly valued by employers within this sector. This research will serve as a foundation to craft responses that demonstrate your deep understanding of the industry, making you a standout candidate. Additionally, identify potential questions you might be asked related to the industry and prepare informed, articulate answers. Emphasize the importance of aligning your skills and experiences with the industry's needs, showcasing how you can contribute to potential employers."
+        }
+      ],
+      "Perform Mock Interview": [
+        {
+          "id": "interview-prep-7",
+          "title": "Perform Mock Interview",
+          "content": "Act as an interviewer responsible for conducting mock interviews. Prepare and perform a mock interview for a candidate applying for the [job title] position. The mock interview should simulate the real interview process for this role, including common and role‑specific questions. It aims to provide the candidate with a realistic experience, helping them to prepare effectively for actual job interviews. Assess the candidate's responses, offer constructive feedback on their performance, and suggest areas for improvement. Ensure the interview covers aspects such as the candidate's experience, skills relevant to the [job title], problem‑solving abilities, and cultural fit for the organization. Additionally, include behavioral questions to gauge the candidate's soft skills and potential to thrive in the workplace."
+        }
+      ],
+      "Suggest Technical Questions": [
+        {
+          "id": "interview-prep-8",
+          "title": "Suggest Technical Questions",
+          "content": "Act as an HR expert assistant, compile a comprehensive list of common technical questions for an interview based on the given [job title]. This list should encompass a broad range of questions that accurately assess the candidate's technical skills, knowledge, and problem‑solving abilities relevant to the role. Ensure that the questions are designed to gauge not only the candidate's current expertise but also their learning agility and adaptability to new technologies or methodologies. Additionally, incorporate scenario‑based questions to understand how the candidate applies their technical knowledge in practical situations. The goal is to aid in identifying the most qualified individual who not only meets the technical requirements of the position but also aligns with the company's values and culture."
+        }
+      ],
+    "Performance Reviews": {
+      "Suggest Potential Performance Metrics": [
+        {
+          "id": "performance-reviews-1",
+          "title": "Suggest Potential Performance Metrics",
+          "content": "As a performance review expert, it's your responsibility to define and suggest relevant performance metrics for a [position]. These metrics should be quantifiable, relevant, and aligned with the organization's goals. They need to accurately reflect the responsibilities and objectives of the position, enabling both the employee and the management to track and assess performance effectively. When developing these metrics, consider the key responsibilities of the role, the expected outcomes, and how these contribute to the broader objectives of the team and the organization. Metrics may include quality of work, efficiency, teamwork and collaboration, problem‑solving abilities, customer satisfaction rates, project completion rates, adherence to deadlines, innovation and creativity, sales numbers, cost savings, or any other relevant indicators of successful performance in the specific role. Each metric should be clearly defined, measurable, attainable, relevant, and time‑bound (SMART criteria) to ensure they are practical and useful for performance evaluation."
+        }
+      ],
+      "Suggest KPIs for Measuring a Metric": [
+        {
+          "id": "performance-reviews-2",
+          "title": "Suggest KPIs for Measuring a Metric",
+          "content": "Act as a performance review expert who specializes in developing Key Performance Indicators (KPIs). Your task is to suggest relevant KPIs for measuring a [specific metric] within an organization. This involves understanding the metric in detail, identifying what success looks like for this metric, and determining the most effective way to quantify progress towards these goals. The KPIs you suggest should be SMART (Specific, Measurable, Achievable, Relevant, Time‑bound), allowing for clear tracking and assessment. Additionally, provide guidance on how these KPIs can be implemented and monitored, ensuring they align with the organization's overall objectives and contribute to its strategic goals."
+        }
+      ],
+      "Develop Smart Goals for a Team": [
+        {
+          "id": "performance-reviews-3",
+          "title": "Develop Smart Goals for a Team",
+          "content": "As a performance review expert, develop SMART goals for a team working in [field]. These goals should be Specific, Measurable, Achievable, Relevant, and Time‑bound. Ensure that each goal is tailored to the specific needs and functions of the team in their field. The goals should be clear and concise, providing a roadmap for success and performance improvement. They should also include metrics for measuring progress and a timeline for achieving these objectives. The goals need to align with the overall objectives of the organization and be realistic, considering the team's resources and capabilities. Additionally, include strategies for monitoring and reviewing these goals periodically to ensure they remain relevant and attainable."
+        }
+      ],
+      "Benchmark Employee Feedback": [
+        {
+          "id": "performance-reviews-4",
+          "title": "Benchmark Employee Feedback",
+          "content": "Act as a performance review expert. Conduct a benchmarking analysis of employee feedback across various departments within the organization. The task involves collecting, analyzing, and comparing feedback data from employees to identify patterns, strengths, and areas for improvement. Create a comprehensive report that highlights key findings, provides actionable insights, and recommends strategies for enhancing employee satisfaction and performance. Ensure the analysis is objective, data‑driven, and aligns with best practices in employee performance management. The final report should be clear, concise, and useful for decision‑makers in developing effective employee engagement and development plans."
+        }
+      ],
+      "Identify Skill Gaps in a Review": [
+        {
+          "id": "performance-reviews-5",
+          "title": "Identify Skill Gaps in a Review",
+          "content": "As a Performance Review Expert, your task is to analyze an employee's performance review to identify any skill gaps. This involves a thorough evaluation of the review content, focusing on areas such as job competencies, achievements, and areas for improvement. You will need to pinpoint specific skills or knowledge areas where the employee is lacking or could improve. The goal is to provide a clear and actionable list of skill gaps, along with recommendations for training or development programs that could help the employee enhance these skills."
+        }
+      ],
+      "Outline Possible Career Paths": [
+        {
+          "id": "performance-reviews-6",
+          "title": "Outline Possible Career Paths",
+          "content": "As a performance review expert, your task is to outline possible career paths for a [role]. This should include a comprehensive overview of potential job titles and responsibilities at various stages of their career, from entry‑level to senior positions. Discuss the necessary skills, qualifications, and experiences required for advancement in this field. Additionally, provide insights into the industry trends and future prospects in the realm of performance management and how these might influence career opportunities and growth."
+        }
+      ],
     },
     "performanceReviews": {
       "Suggest Potential Performance Metrics": [
@@ -1751,4 +1850,5 @@
     }
   }
 }
+
 
