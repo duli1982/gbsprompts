@@ -18,7 +18,7 @@
         }
       ],
       "One-Shot Prompting": [
-        {
+        {a
           "id": "prompting-techniques-3",
           "title": "One-Shot Prompting",
           "description": "Give exactly one example to demonstrate the desired format or approach before requesting the main task.",
@@ -1272,11 +1272,13 @@
         {
           "id": "excel-1",
           "title": "Explain How Excel Function Works",
+          "description": "Get clear, step-by-step explanations of Excel functions including parameters, use cases, benefits, and optimization tips for better spreadsheet proficiency.",
           "content": "Act as a proficient Excel user and explain how the [name of Excel function] works in a clear and concise manner. Provide step-by-step instructions on how to use the function, including any necessary parameters or inputs. Give examples or scenarios where the function would be useful and explain the benefits of using it. Make sure to include any tips or best practices for optimizing the function's performance in Excel."
         },
         {
           "id": "excel-2",
           "title": "Explain How to Use Excel Functions",
+          "description": "Create comprehensive guides for using specific Excel functions to perform targeted actions with easy-to-follow instructions and practical examples.",
           "content": "Act as a proficient Excel user and create a step-by-step guide on how to use the [Excel function] to perform a specific [action] . Break down the process into easy-to-follow instructions, including screenshots or examples where necessary. Explain the purpose and benefits of using this function, and highlight any tips or tricks that can help users optimize their use of Excel. Make sure to provide clear and concise explanations to help users understand and successfully execute the task."
         }
       ],
@@ -1284,11 +1286,13 @@
         {
           "id": "excel-3",
           "title": "Write Excel Commands",
+          "description": "Generate accurate Excel commands for specific actions with clear explanations to ensure successful execution and desired outcomes.",
           "content": "Act as a proficient Excel user. Write an Excel command to perform a specific [action] . The command should accurately achieve the desired outcome. Provide any necessary explanations or additional information to ensure that the command is easily understood and can be executed successfully."
         },
         {
           "id": "excel-4",
           "title": "Write Macros",
+          "description": "Develop VBA Excel macros that automate repetitive tasks efficiently with user-friendly interfaces and thoroughly tested functionality.",
           "content": "Act as a proficient Excel user with knowledge of VBA. Develop a VBA Excel macro that automates a [specific task] within the spreadsheet. The macro should perform the desired action efficiently and accurately, saving time and reducing the margin for error. Ensure that the macro is user-friendly and easily accessible for other users who may need to utilize it in the future. Test the macro thoroughly to confirm its functionality and make any necessary adjustments to optimize its performance."
         }
       ],
@@ -1296,30 +1300,36 @@
         {
           "id": "excel-5",
           "title": "Perform Complex Tasks",
+          "description": "Execute advanced Excel tasks including data analysis, formula creation, and report generation with precision and efficiency using expert-level skills.",
           "content": "Act as a proficient Excel user. Follow the detailed task instructions provided to perform a [task] using Excel. This may involve data analysis, creating formulas, generating reports, or any other task that requires advanced Excel skills. Ensure accuracy, efficiency, and attention to detail while completing the task. If there are any uncertainties or questions, seek clarification before proceeding to ensure the task is completed successfully."
         },
         {
           "id": "excel-6",
           "title": "Turn Gemini Into a Useful Excel Assistant",
+          "description": "Get comprehensive Excel assistance with step-by-step instructions for any task including pivot tables, formulas, charts, and data formatting.",
           "content": "Act as an Excel expert. Provide step-by-step instructions on how to complete a specific task in Excel. This could include tasks such as creating a pivot table, formatting data, using formulas or functions, creating charts or graphs, or any other Excel-related task. Clearly explain each step, specify any required settings, or options, explain what functions to use, and provide any additional tips or recommendations to ensure accurate and efficient completion of the task. Help me with the following task: [describe your task]"
         }
       ]
     },
+
     "Goal Setting": {
       "Planning & Strategy": [
         {
           "id": "goal-setting-1",
           "title": "Structure Goals",
+          "description": "Break down goals into actionable steps with realistic timelines, milestones, and achievement strategies that balance challenge with feasibility.",
           "content": "Act as a goal setting expert. Your task is to take the provided [list of goals] and break them down into actionable steps, complete with timelines and milestones for each step. This process should start with a clear definition of each goal, followed by a detailed plan that outlines what needs to be achieved, how it can be done, and by when. For each goal, identify the key actions required, assign a realistic timeline for completion, and set specific milestones to mark progress. Ensure that the plan is both achievable and challenging, keeping in mind the resources available and any potential obstacles."
         },
         {
           "id": "goal-setting-2",
           "title": "Plan & Track Goals",
+          "description": "Create comprehensive action plans with progress monitoring systems, resource allocation, and adaptive strategies for continuous goal achievement.",
           "content": "Act as a goal-setting expert responsible for drafting a detailed action plan to track a specific [list of goals] . This plan should begin with a comprehensive assessment of each goal, including its relevance, urgency, and the specific outcomes desired. Following this, develop a step-by-step strategy that outlines the tasks and milestones necessary to achieve each goal. Your plan must include a timeline for each step, identifying responsible parties and resources required. Incorporate methods for monitoring progress and adjusting strategies as needed to ensure continuous movement toward goal achievement."
         },
         {
           "id": "goal-setting-3",
           "title": "Brainstorm Goals",
+          "description": "Generate SMART goals for specific life areas with clear achievement criteria and practical first steps to inspire motivation and action.",
           "content": "Act as an expert in setting actionable goals. Your task is to brainstorm and articulate clear, achievable goals for [specific area of life] . Provide a list of goals that are SMART (Specific, Measurable, Achievable, Relevant, Time-bound). Ensure that these goals not only inspire motivation but also include practical steps for how an individual can begin to work towards achieving them."
         }
       ],
@@ -1327,161 +1337,194 @@
         {
           "id": "goal-setting-4",
           "title": "Help With Self-Reflection",
+          "description": "Design guided self-reflection sessions with thought-provoking questions to explore underlying motivations, priorities, and obstacles for deeper goal understanding.",
           "content": "As a goal setting expert, design a comprehensive session aimed at facilitating deep introspection on the provided [list of goals] . Develop a series of guided questions designed to provoke thought, encourage self-examination, and identify the underlying motivations behind each goal. These questions should challenge the individual to consider their priorities, potential obstacles, and the actionable steps necessary to achieve their objectives. The session should be structured in a way that promotes open and honest reflection, allowing for a thorough exploration of each goal."
         },
         {
           "id": "goal-setting-5",
           "title": "Provide Motivation & Accountability",
+          "description": "Create personalized affirmations that motivate, inspire confidence, and maintain positive mindset while reinforcing belief in goal attainability.",
           "content": "Act as a goal setting expert, tasked with creating personalized affirmations for an individual based on their [specific list of goals] . These affirmations should be designed to motivate, inspire, and build confidence, helping the individual to focus on their objectives and maintain a positive mindset. Each affirmation must be clear, concise, and powerful, directly addressing the goals provided. Ensure that the affirmations are actionable and encourage progress, reinforcing the belief that these goals are attainable."
         }
       ]
     },
+
     "Market Research": {
       "Market Research Prompts": [
         {
           "id": "market-research-1",
           "title": "Suggest Research Methodologies",
+          "description": "Develop comprehensive lists of primary and secondary research methodologies including surveys, focus groups, and digital analytics for strategic market insights.",
           "content": "Act as an experienced market researcher. Develop a comprehensive list of market research methodologies that can be utilized to gather valuable insights about [product/service] and its potential market. These methodologies should cover both primary and secondary research techniques, including but not limited to surveys, focus groups, interviews, observation, case studies, and market analysis. Each suggested methodology should come with a brief explanation of how it will contribute to understanding the market demand, competitive landscape, customer preferences, and potential barriers to entry. Additionally, include recommendations for digital analytics tools and social media listening platforms that could provide real-time data and trends related to [product/service]. Ensure that the methodologies are feasible, cost-effective, and tailored to gather the most relevant information to inform strategic decisions."
         },
         {
           "id": "market-research-2",
           "title": "Gather Public Data",
+          "description": "Compile comprehensive market intelligence using public databases, industry reports, and social media analytics to identify opportunities and challenges.",
           "content": "Act as an experienced market researcher. Your task is to gather comprehensive public data on [product/service] and its [target audience]. This involves conducting a detailed analysis of market trends, customer preferences, competitive landscape, and potential growth areas. Utilize a variety of sources, including online databases, consumer surveys, social media analytics, and industry reports, to compile a report that offers insightful and actionable information. The report should identify key opportunities and challenges facing [product/service] in reaching [target audience], and propose data-driven recommendations to enhance market penetration and customer engagement. Ensure that your research is thorough, up-to-date, and complies with all relevant data protection regulations."
         },
         {
           "id": "market-research-3",
           "title": "Create Customer Personas",
+          "description": "Develop detailed customer personas with demographics, psychographics, behavioral traits, and communication preferences for targeted marketing strategies.",
           "content": "As an experienced market researcher, your task is to develop a comprehensive customer persona for [product/service]. This persona will serve as a cornerstone for marketing strategies, product development, and customer support initiatives. Your work should involve in-depth research and analysis to accurately represent the target customer. Begin by identifying the key demographics of the target audience, including age, gender, location, and income level. Delve into psychographics, such as interests, values, lifestyle, and challenges that the target audience faces which [product/service] can solve. Your customer persona should detail: Demographic information, Psychographics, Behavioral traits, Goals and challenges, Preferred channels of communication, A day in the life scenario."
         },
         {
           "id": "market-research-4",
           "title": "Identify Market Gaps",
+          "description": "Conduct comprehensive market analysis to identify unmet needs and opportunities where products or services can gain competitive advantage.",
           "content": "Act as an experienced market researcher specializing in [niche]. Your task is to conduct a comprehensive analysis to identify existing market gaps where [product/service] could significantly impact and gain an advantage. This involves examining current market trends, customer needs and preferences, competitor strategies, and potential areas for innovation or improvement. Utilize both qualitative and quantitative research methods, including surveys, interviews, and data analysis, to gather insights. Based on your findings, provide a detailed report highlighting specific opportunities for [product/service] to fill these gaps effectively. The report should include actionable recommendations and strategies for positioning [product/service] to capitalize on these identified opportunities, considering the competitive landscape and target audience's evolving needs."
         },
         {
           "id": "market-research-5",
           "title": "Find Competitors",
+          "description": "Identify and analyze direct and indirect competitors with detailed profiles covering market share, strategies, strengths, and competitive positioning.",
           "content": "As an experienced market researcher, your task is to identify potential competitors for a specific [product/service]. This involves conducting a comprehensive market analysis to uncover direct and indirect competitors within the market. You will need to use various research methodologies, including online databases, industry reports, social media analysis, and customer feedback platforms to gather relevant data. Your analysis should include a detailed profile of each competitor, covering aspects such as their market share, product offerings, pricing strategies, distribution channels, marketing approaches, and customer base. Additionally, identify any unique selling propositions (USPs) or weaknesses of these competitors to understand their position in the market. The final deliverable should be a comprehensive report that not only lists the potential competitors but also provides an analysis of their strengths and weaknesses, competitive positioning, and potential impact on the [product/service] you are researching. This report will be crucial for strategic planning, helping to inform decisions on product development, marketing strategies, and market entry tactics."
         }
       ]
     },
+
     "Newsletter": {
       "Newsletter Prompts": [
         {
           "id": "newsletter-1",
           "title": "Draft Opinion Piece",
+          "description": "Create engaging, fact-backed opinion pieces that spark discussion and maintain audience rapport with conversational tone and compelling calls-to-action.",
           "content": "As a successful newsletter creator with a large audience, draft an opinion piece on the given [topic]. Your piece should be engaging, persuasive, and informative, aiming to spark discussions among your readers. Make sure to back up your opinion with relevant facts and statistics. The piece should be written in a conversational tone to maintain the rapport with your audience. Ensure that it is in line with your newsletter's overall tone and style. Make sure to include a call-to-action at the end to encourage readers to respond or share your piece."
         },
         {
           "id": "newsletter-2",
           "title": "Provide Industry Updates",
+          "description": "Deliver concise, comprehensive industry summaries that capture key developments, trends, and insights in an engaging, conversational format.",
           "content": "As a successful newsletter creator with a large audience, your task is to provide a concise yet comprehensive summary of the latest developments in the [sector]. The summary should be able to capture the interest of our newsletter audience, providing them with valuable insights and updates in a digestible format. This includes highlighting key events, trends, and notable changes in the sector. The content should be written in a conversational tone, maintaining a balance between professional and engaging. It should adhere to our brand voice and style guide. The summary should also encourage the readers to engage and interact with our brand, thereby increasing our newsletter's overall effectiveness."
         },
         {
           "id": "newsletter-3",
           "title": "Summarize Interview",
+          "description": "Transform interview content into engaging summaries that highlight key insights while encouraging readers to engage with the full content.",
           "content": "As a successful newsletter creator with a large audience, your task is to summarize a recent interview with [person] for the next newsletter issue. Capture the key points, insights, and highlights of the interview in a concise and engaging manner. Your summary should engage the readers, encourage them to read the full interview, and add value to their understanding of the subject. The tone and style of your writing should be consistent with the rest of the newsletter, and it should be optimized for email reading. Remember to include a call-to-action to drive reader engagement."
         },
         {
           "id": "newsletter-4",
           "title": "Edit & Proofread",
+          "description": "Provide comprehensive editing and proofreading services ensuring error-free, engaging content with consistent brand voice and optimized layout.",
           "content": "As a successful newsletter creator with a large audience, your task is to edit and proofread the upcoming newsletter issue. This includes reviewing the content for clarity, coherence, and conciseness. Check for any grammatical, spelling, or punctuation errors and rectify them. Ensure the content aligns with the brand voice and is engaging for the audience. Also, check the layout and design for consistency and visual appeal. Make sure all links work and lead to the correct pages. Your goal is to create a newsletter that is error-free, easy to read, and engaging for the audience. Here is the issue:"
         },
         {
           "id": "newsletter-5",
           "title": "Generate Catchy Headlines",
+          "description": "Create compelling, SEO-friendly headlines that accurately represent content while capturing audience attention and encouraging engagement.",
           "content": "As a successful newsletter creator with a large audience, generate 5 catchy headlines for an upcoming newsletter article about [topic]. The headlines should be engaging, compelling, and should accurately represent the content of the article. They should be tailored to attract the interest of our target audience and encourage them to read the entire article. These headlines should also be SEO-friendly to increase the visibility of our newsletter on search engines."
         },
         {
           "id": "newsletter-6",
           "title": "Write Engaging Intro",
+          "description": "Craft captivating introductions that draw readers in with compelling hooks while maintaining consistency with newsletter tone and style.",
           "content": "As a successful newsletter creator with a large audience, your task is to write an engaging introduction for a story about [topic]. The introduction should be compelling, drawing in readers to want to continue reading the story. It should give a brief overview of what the story will be about, without giving too much away. It should also align with the tone and style typically used in the newsletter, to maintain consistency for the readers. Use your expertise in content creation to make the introduction as captivating as possible."
         },
         {
           "id": "newsletter-7",
           "title": "Come Up With CTAs",
+          "description": "Develop compelling call-to-action phrases that resonate with audiences and drive immediate engagement, clicks, and desired actions.",
           "content": "As a successful newsletter creator with a large audience, your task is to come up with compelling call-to-action phrases for a newsletter about [topic]. These phrases should encourage subscribers to engage with the content, click on links, or take other desired actions. The phrases should be aligned with the topic of the newsletter and resonate with the audience, prompting them to take immediate action."
         },
         {
           "id": "newsletter-8",
           "title": "Generate Subscription Campaign Ideas",
+          "description": "Create innovative subscription campaigns that highlight value propositions and effectively reach target audiences through diverse marketing channels.",
           "content": "As a successful newsletter creator with a large audience, your task is to generate innovative and compelling campaign ideas to increase our newsletter subscriptions. The campaign should encourage potential subscribers to sign up for our newsletter, highlighting the benefits and value they will receive. Your ideas need to be creative, original, and capable of effectively reaching our target audience. Consider various marketing channels and strategies, including social media, email marketing, incentives, and partnerships. Remember to keep our brand's image and values in mind throughout the process."
         },
         {
           "id": "newsletter-9",
           "title": "Suggest Cross-Promotion Strategies",
+          "description": "Develop strategic cross-promotion opportunities and collaborative activities that leverage existing audiences for mutual growth and engagement.",
           "content": "As a successful newsletter creator with a large audience, come up with innovative and effective strategies to cross-promote our newsletter. Identify potential collaboration opportunities, and suggest ways to leverage your existing audience to increase our newsletter's readership. Consider cross-promotion strategies such as guest editorials, newsletter swaps, shout-outs, and other mutually beneficial promotional activities. Your suggestions should be based on your experience and understanding of what works best for audience engagement and growth in newsletter marketing."
         },
         {
           "id": "newsletter-10",
           "title": "Write Article",
+          "description": "Create well-researched, engaging articles that align with brand voice and incorporate SEO strategies to drive high open rates and engagement.",
           "content": "As an experienced copywriter and successful newsletter creator with a large audience, your task is to write an engaging and informative article on the [topic] for our newsletter. The article should be well-researched, informative, and appealing to our diverse audience. It should be written in an engaging style, using language and tone that aligns with our brand voice. The article should ideally stimulate reader interest and drive engagement, leading to high open and click-through rates. Incorporate relevant keywords strategically to improve our SEO ranking."
         }
       ]
     },
+
     "Product Management": {
       "Product Management Prompts": [
         {
           "id": "product-management-1",
           "title": "Perform Market Research",
+          "description": "Conduct comprehensive market analysis including target identification, competitor analysis, customer needs assessment, and trend evaluation for strategic product development.",
           "content": "Act as a seasoned product manager. Perform comprehensive market research based on the given [product description]. Your task involves identifying the target market, analyzing competitors, understanding customer needs and preferences, and evaluating the potential market size. You will also assess current trends that might affect the product's success. Your findings should inform product development, positioning, and marketing strategies. Compile your research into a detailed report, including data analysis, insights, and actionable recommendations to ensure the product's competitive edge in the market."
         },
         {
           "id": "product-management-2",
           "title": "Build a Pricing Strategy",
+          "description": "Develop comprehensive pricing strategies that balance profitability with market penetration using value-based approaches and tiered models for competitive positioning.",
           "content": "Act as a seasoned product manager with extensive experience in market analysis, competitive strategy, and value proposition. Develop a comprehensive pricing strategy for [product description] that effectively balances profitability with market penetration. Your strategy should include a thorough market analysis to identify target customer segments, competitive pricing benchmarks, and potential barriers to entry. Utilize a value-based pricing approach to highlight the product's unique benefits and justify its price point. Additionally, consider implementing tiered pricing models, discounts, or promotional offers to cater to different customer segments and drive volume. Ensure your pricing strategy is adaptable, allowing for future adjustments based on market feedback and sales performance data. Your ultimate goal is to position [product description] competitively in the market, maximizing revenue while ensuring customer satisfaction and loyalty."
         },
         {
           "id": "product-management-3",
           "title": "Create Customer Personas",
+          "description": "Build detailed customer personas with demographics, behaviors, motivations, and pain points to guide product development and marketing strategies effectively.",
           "content": "Act as a seasoned product manager with extensive experience in market analysis and customer behavior. Your task is to create detailed customer personas for a [product]. These personas should represent the ideal customers, including demographics, interests, behaviors, and purchasing motivations. Your work will involve analyzing existing data, conducting market research, and using your insights to build personas that accurately reflect the target audience. These personas will be crucial for tailoring marketing strategies, product development, and sales approaches. Ensure each persona is well-documented, including scenarios on how they would interact with the product, their pain points, and the solutions the product offers to meet their needs."
         },
         {
           "id": "product-management-4",
           "title": "Create a Product Roadmap",
+          "description": "Develop comprehensive product roadmaps with strategic phases, milestones, timelines, and KPIs from inception through launch and beyond for stakeholder alignment.",
           "content": "Act as a seasoned product manager. Your task is to create a comprehensive product roadmap for [product], a groundbreaking offering that addresses the needs of [target audience]. This roadmap should outline the strategic direction and development phases of the product, from inception to launch and beyond. Begin by conducting a thorough market analysis to understand the competitive landscape and the unique value proposition of [product]. Identify key milestones, including initial market research, prototype development, testing phases, beta release, and official launch. Each phase should have clearly defined objectives, deliverables, timelines, and the resources required. Incorporate feedback loops with target users to ensure the product meets their needs and expectations. Prioritize features based on their impact and feasibility, ensuring the most critical elements are developed first. Additionally, detail the marketing and sales strategies that will accompany the product development phases to build anticipation and drive adoption upon release. Include key performance indicators (KPIs) to measure the success of the product at various stages. Your roadmap should be flexible yet focused, allowing for adjustments as the product evolves while keeping the team aligned towards the ultimate goal of revolutionizing the market for [target audience]. Ensure that the roadmap is visually engaging and easy to understand, facilitating communication with stakeholders and team members."
         },
         {
           "id": "product-management-5",
           "title": "Write User Stories",
+          "description": "Craft detailed, prioritized user stories that capture end-user needs, goals, and value propositions to guide user-centric product development effectively.",
           "content": "Act as a seasoned product manager. Your task is to craft comprehensive user stories for [product] based on its description. These user stories should be detailed, focusing on the needs and goals of the end users. They should follow the standard format of \"As a [type of user], I want [an action] so that [benefit].\" Each story must clearly outline how different types of users will interact with the product, their expectations, and the value the product brings to their lives. Ensure that the user stories are prioritized based on the impact on the user experience and the product's strategic goals. Your user stories will be pivotal in guiding the development team to understand and empathize with the users, ensuring that the product development is user-centric and meets the market needs effectively."
         },
         {
           "id": "product-management-6",
           "title": "Analyze Customer Feedback",
+          "description": "Extract actionable insights from customer feedback through pattern analysis, prioritization, and strategic recommendations for product improvement and enhancement.",
           "content": "As a seasoned product manager, you are tasked with analyzing [customer feedback entries] to identify patterns, trends, and insights that can inform product development and enhancement strategies. Your analysis should focus on extracting actionable insights from the feedback, prioritizing the feedback based on its potential impact on customer satisfaction and business goals, and recommending concrete steps for addressing the feedback. You should categorize the feedback into themes, quantify the feedback to understand its prevalence, and assess the feedback's significance in relation to the product's current performance and future roadmap. Your analysis will be crucial in guiding the product team's efforts to iterate on the product, improve user experience, and ultimately drive product success. Ensure that your recommendations are data-driven, align with the company's strategic objectives, and are presented in a clear, concise, and actionable manner to stakeholders."
         }
       ]
     },
+
     "Project Management": {
       "Project Management Prompts": [
         {
           "id": "project-management-1",
           "title": "Create Project Blueprint for a Team",
+          "description": "Develop comprehensive project blueprints with objectives, scope, timelines, budgets, resource allocation, and risk mitigation strategies for successful execution.",
           "content": "As an experienced project manager, your task is to develop a comprehensive project blueprint based on the given [project description]. This blueprint should outline the project's objectives, scope, deliverables, timelines, budget, and resource allocation. Start by conducting a thorough analysis of the project description to identify key requirements and objectives. Then, define the project scope to establish clear boundaries and prevent scope creep. Develop a detailed work breakdown structure (WBS) to identify all the tasks and activities needed to complete the project. Create a realistic timeline, setting milestones and deadlines for each phase of the project. Prepare a budget that includes an estimate of all costs associated with the project, such as labor, materials, and equipment. Finally, allocate resources effectively, ensuring that each task is assigned to team members with the appropriate skills and expertise. Throughout this process, consider potential risks and devise mitigation strategies to ensure the project's success. The blueprint should serve as a roadmap for the project team, guiding them from initiation through to completion, while ensuring that the project's goals are achieved efficiently and effectively."
         },
         {
           "id": "project-management-2",
           "title": "Conduct Risk Analysis",
+          "description": "Create comprehensive risk analysis documents that identify, assess, prioritize, and mitigate potential project risks across financial, operational, and technological domains.",
           "content": "Act as an experienced project manager responsible for overseeing the successful execution of a [project]. Your task is to create a comprehensive risk analysis document that identifies potential risks associated with the project, assesses their impact, and outlines mitigation strategies. This document should cover all aspects of the project, including but not limited to financial, operational, technological, and legal risks. Utilize your expertise to prioritize risks based on their likelihood and potential impact on the project's objectives. Develop a plan for regular monitoring and reporting of these risks throughout the project lifecycle. Your analysis will be crucial in making informed decisions and ensuring the project's resilience against unforeseen challenges."
         },
         {
           "id": "project-management-3",
           "title": "Help With Meetings",
+          "description": "Design comprehensive post-project evaluation templates that assess performance, identify lessons learned, and provide recommendations for future project improvements.",
           "content": "As an experienced project manager, create a Post Project Evaluation Template for a [project]. This template should be comprehensive and designed to assess the project's overall performance, identifying successes, challenges, areas for improvement, and lessons learned. The evaluation template must include sections for: Project Overview, Objectives and Outcomes, Budget and Resources, Process and Implementation, Team Performance and Collaboration, Challenges and Problem-Solving, Stakeholder Satisfaction, Lessons Learned, Recommendations for Future Projects, Appendices."
         },
         {
           "id": "project-management-4",
           "title": "Communicate With Stakeholders",
+          "description": "Draft professional stakeholder communications that transparently share achievements and challenges while maintaining confidence and demonstrating proactive problem-solving.",
           "content": "As an experienced project manager, your task is to draft an email to the stakeholders of [project], providing them with a comprehensive update that includes both the [achievements] and [current challenges] the project is facing. This email should serve not only to inform but also to maintain stakeholders' confidence in the project's success. Start by briefly summarizing the project's goals and its current status. Highlight the key achievements that have been made towards these goals, including any milestones reached, metrics that show progress, or positive feedback from users or clients. Be specific about what has been accomplished and, if possible, link these achievements to the hard work of your team and the strategic decisions made along the way. Next, address the current challenges the project is facing. Be honest and transparent about these obstacles, but also demonstrate a proactive approach to solving them. Outline any strategies or solutions you are considering or have already put into place to overcome these issues. This section should reassure stakeholders that, despite the challenges, the project is in capable hands. Throughout the email, maintain a positive and professional tone. Your goal is to keep stakeholders informed and engaged with the project, reassuring them of its continued progress and your commitment to its success."
         },
         {
           "id": "project-management-5",
           "title": "Prioritize Project Tasks",
+          "description": "Strategically prioritize project tasks based on urgency, importance, and resource requirements while managing dependencies and optimizing team efficiency.",
           "content": "Act as an experienced project manager responsible for overseeing a complex [project]. Your task is to prioritize the various tasks within the project according to their urgency, importance, and the resources required. Begin by evaluating each task's impact on the project's overall objectives and deadlines. Develop a strategy for tackling the tasks in a sequence that maximizes efficiency and effectiveness while minimizing risks. You will need to communicate your plan clearly to your team, assigning responsibilities and setting clear deadlines. Additionally, you must monitor the progress of these tasks, making adjustments as necessary to ensure the project stays on track. Use project management tools and methodologies to organize tasks, and consider factors such as task dependencies, team member workloads, and potential bottlenecks in your planning. Your ultimate goal is to ensure the successful completion of the project on time and within budget, maintaining high-quality standards throughout the process."
         }
       ]
     },
+
     "Sales": {
       "Market Research": [
         {
@@ -2039,6 +2082,7 @@
     }
   }
 }
+
 
 
 
