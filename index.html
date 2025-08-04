@@ -295,123 +295,24 @@
         /**
          * Renders the initial homepage view with category cards.
          */
-
         function renderHomepage() {
             categoryCardsContainer.innerHTML = '';
+            // Reset grid to default
             categoryCardsContainer.className = 'grid md:grid-cols-2 lg:grid-cols-3 gap-8';
+            for (const categoryName in promptData) {
+                const category = promptData[categoryName];
+                const subCategories = Object.keys(category);
 
-            // Define the desired order and structure of categories and subcategories
-            // Define the desired order and structure of categories and subcategories with descriptions
-            const orderedCategories = {
-                "🎯 Talent & HR Management": {
-                    description: "(For recruiters, hiring managers, and HR professionals)",
-                    subcategories: [
-                        "Recruitment",
-                        "AI-Powered Recruitment",
-                        "Candidate Engagement",
-                        "Sourcing Strategy",
-                        "Interview Preparation",
-                        "Performance Reviews"
-                    ]
-                },
-                "🚀 Career & Job Seeking": {
-                    description: "(For individuals seeking jobs or career growth)",
-                    subcategories: [
-                        "Career Advice",
-                        "Career Coaching",
-                        "Job Search",
-                        "Resume Writing"
-                    ]
-                },
-                "📈 Business & Market Strategy": {
-                    description: "(For business owners, strategists, and managers)",
-                    subcategories: [
-                        "Business Plan",
-                        "Product Management",
-                        "Project Management",
-                        "Research & Market Intelligence",
-                        "Sales",
-                        "Financial Advice",
-                        "Budgeting"
-                    ]
-                },
-                "✍️ Content & Creative": {
-                    description: "(For marketing, design, and content creation)",
-                    subcategories: [
-                        "Branding",
-                        "Graphic Design",
-                        "UX Design",
-                        "Newsletter",
-                        "Course Creation"
-                    ]
-                },
-                "⚙️ Personal & Professional Productivity": {
-                    description: "(For improving individual workflow and focus)",
-                    subcategories: [
-                        "Time Management",
-                        "Daily Scheduling",
-                        "Goal Setting",
-                        "Meeting Notes",
-                        "ADHD",
-                        "Event Planning"
-                    ]
-                },
-                "💻 Technical & Data Skills": {
-                    description: "(For specific software and data-related tasks)",
-                    subcategories: [
-                        "Data Analysis",
-                        "Excel",
-                        "VBA"
-                    ]
-                },
-                "✨ Core Prompting Techniques": {
-                    description: "(Fundamental techniques for interacting with AI models)",
-                    subcategories: [
-                        "Prompting Techniques"
-                    ]
-                },
-                "🤖 Advanced Frameworks & Systems": {
-                    description: "(Complex, multi-step prompts for strategic tasks)",
-                    subcategories: [
-                        "McKinsey-Style Strategic Report",
-                        "Reverse Genius Protocol",
-                        "360° Growth Audit & Acceleration Blueprint",
-                        "Content Creation Framework"
-                    ]
-                }
-            };
+                const card = document.createElement('div');
+                card.className = 'prompt-block flex flex-col';
 
-            for (const categoryName in orderedCategories) {
-                const categoryInfo = orderedCategories[categoryName];
-                // Find the matching category in the loaded data based on a simplified name
-                const simplifiedCategoryName = categoryName.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
-                let foundCategoryData = null;
-                for (const dataKey in promptData) {
-                    if (dataKey.replace(/[^a-zA-Z0-9]/g, '').toLowerCase() === simplifiedCategoryName) {
-                        foundCategoryData = promptData[dataKey];
-                        break;
-                    }
-                }
+                let subCategoryLinks = subCategories.map(subName =>
+                    `<li><a href="#" class="block py-1.5 text-gray-500" data-category="${categoryName}" data-subcategory="${subName}">→ ${subName}</a></li>`
+                ).join('');
 
-                if (foundCategoryData) {
-                    const orderedSubCategories = categoryInfo.subcategories;
-                    const categoryDescription = categoryInfo.description;
-
-                    const card = document.createElement('div');
-                    card.className = 'prompt-block flex flex-col';
-
-                    let subCategoryLinks = orderedSubCategories.map(subName => {
-                        // Only create a link if the subcategory exists in the loaded data
-                        if (foundCategoryData[subName]) {
-                            return `<li><a href="#" class="block py-1.5 text-gray-500" data-category="${categoryName}" data-subcategory="${subName}">→ ${subName}</a></li>`;
-                        }
-                        return ''; // Return empty string if subcategory not found
-                    }).join('');
-
-                    card.innerHTML = `
+                card.innerHTML = `
                     <div class="p-6">
                         <h2 class="text-xl font-bold text-center main-heading">Gemini Prompts for <span class="accent-text">${categoryName}</span></h2>
- <p class="text-gray-600 text-center text-sm mt-1">${categoryDescription}</p>
                     </div>
                     <div class="flex-grow px-6 category-card-list scrollable-list overflow-y-auto">
                         <ul>${subCategoryLinks}</ul>
@@ -420,8 +321,7 @@
                         <button class="see-all-btn w-full py-2.5 rounded-md font-semibold" data-category="${categoryName}">See all prompts →</button>
                     </div>
                 `;
-                    categoryCardsContainer.appendChild(card);
-                }
+                categoryCardsContainer.appendChild(card);
             }
         }
 
@@ -466,15 +366,11 @@
             const titleClass = isSearchResult ? 'text-lg' : 'text-xl';
             const breadcrumbHTML = isSearchResult ? `
                 <p class="text-gray-500 text-sm mb-3">
- <span class="font-semibold">${prompt.category}</span> &gt; <span>${prompt.subcategory}</span>
+                    <span class="font-semibold">${prompt.category}</span> &gt; <span>${prompt.subcategory}</span>
                 </p>` : '';
-            const descriptionHTML = prompt.description ? `<p class="text-gray-600 text-sm mb-2">${prompt.description}</p>` : '';
             const contentContainerClass = isSearchResult ? 'prompt-display-item p-4 text-gray-700 bg-gray-50 rounded-md' : 'prompt-display-item p-4 text-gray-700';
 
             const highlightedTitle = isSearchResult ? highlightText(prompt.title, searchTerm) : prompt.title;
-            // We don't highlight description on the homepage search results for simplicity,
-            // but you could add that logic here if needed.
-            const highlightedDescription = prompt.description;
             const highlightedContent = isSearchResult ? highlightText(prompt.content, searchTerm) : prompt.content;
 
             promptEl.className = isSearchResult ? 'prompt-block p-4' : 'mb-8';
@@ -492,7 +388,6 @@
                     </div>
                 </div>
                 ${breadcrumbHTML}
- ${descriptionHTML}
                 <div class="${contentContainerClass}">
                     <p>${highlightedContent}</p>
                 </div>
@@ -537,18 +432,18 @@
 
         function renderQuickLinks(activeCategory, activeSubCategory) {
             quickLinksSidebar.innerHTML = '';
-            // Display the detailed category structure directly as text
             for (const categoryName in promptData) {
                 const categoryTitle = document.createElement('h4');
                 categoryTitle.className = 'font-bold mt-4 mb-2 main-heading';
-                categoryTitle.innerHTML = `**${categoryName.toUpperCase()}**`; // Example formatting
-                quickLinksSidebar.appendChild(categoryTitle); // Add category as a text header
+                categoryTitle.innerHTML = `Gemini Prompts for <span class="accent-text">${categoryName}</span>`;
+                quickLinksSidebar.appendChild(categoryTitle);
 
-                for (const subCategoryName in promptData[categoryName]) { // Iterate through subcategories
+                const subList = document.createElement('ul');
+                for (const subCategoryName in promptData[categoryName]) {
                     const li = document.createElement('li');
                     const link = document.createElement('a');
                     link.href = '#';
-                    link.textContent = formattedSubCategoryName;
+                    link.textContent = subCategoryName;
                     link.dataset.category = categoryName;
                     link.dataset.subcategory = subCategoryName;
                     // Highlight the active link
@@ -556,7 +451,7 @@
                         link.className = 'active font-semibold';
                     }
                     li.appendChild(link);
-                    quickLinksSidebar.appendChild(li); // Add subcategory as a text item
+                    subList.appendChild(li);
                 }
                 quickLinksSidebar.appendChild(subList);
             }
