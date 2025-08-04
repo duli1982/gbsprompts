@@ -308,12 +308,12 @@
 
             promptEl.innerHTML = `
                 <div class="flex justify-between items-center mb-2">
-                    <h3 class="${titleClass} font-semibold main-heading">${highlightedTitle}</h3>
-                    ${prompt.description ? `<p class="text-gray-600 text-sm mb-2">${prompt.description}</p>` : ''}
-                    <button class="copy-btn text-sm py-1 px-3 rounded-md bg-indigo-100 text-indigo-700 hover:bg-indigo-200" data-prompt-content="${escapedContent}">
+                    <h3 class="${titleClass} font-semibold main-heading w-full">${highlightedTitle}</h3>
+                    <button class="copy-btn text-sm py-1 px-3 rounded-md bg-indigo-100 text-indigo-700 hover:bg-indigo-200 ml-4 flex-shrink-0" data-prompt-content="${escapedContent}">
                         Copy
                     </button>
                 </div>
+                ${prompt.description ? `<p class="text-gray-600 text-sm mb-2">${prompt.description}</p>` : ''}
                 ${breadcrumbHTML}
                 <div class="${contentContainerClass}">
                     <p>${highlightedContent}</p>
