@@ -295,22 +295,68 @@
         /**
          * Renders the initial homepage view with category cards.
          */
+
         function renderHomepage() {
             categoryCardsContainer.innerHTML = '';
-            // Reset grid to default
             categoryCardsContainer.className = 'grid md:grid-cols-2 lg:grid-cols-3 gap-8';
-            for (const categoryName in promptData) {
-                const category = promptData[categoryName];
-                const subCategories = Object.keys(category);
 
-                const card = document.createElement('div');
-                card.className = 'prompt-block flex flex-col';
+            // Define the desired order and structure of categories and subcategories
+            const orderedCategories = {
+                "Writing": [
+                    "Creative Writing",
+                    "Technical Writing",
+                    "Email & Communication",
+                    "Summarization & Extraction"
+                ],
+                "Coding": [
+                    "Code Generation",
+                    "Code Explanation",
+                    "Debugging",
+                    "Code Review"
+                ],
+                "Learning": [
+                    "Studying & Exam Prep",
+                    "Language Learning",
+                    "New Skills"
+                ],
+                "Brainstorming": [
+                    "Ideas & Concepts",
+                    "Problem Solving"
+                ],
+                "Fun": [
+                    "Games & Roleplay",
+                    "Creative Exploration"
+                ],
+                "Productivity": [
+                    "Planning & Organization",
+                    "Analysis & Reflection"
+                ],
+                "Specialized": [
+                    "Marketing & Sales",
+                    "Healthcare",
+                    "Legal",
+                    "Finance",
+                    "Education"
+                ]
+            };
 
-                let subCategoryLinks = subCategories.map(subName =>
-                    `<li><a href="#" class="block py-1.5 text-gray-500" data-category="${categoryName}" data-subcategory="${subName}">→ ${subName}</a></li>`
-                ).join('');
+            for (const categoryName in orderedCategories) {
+                if (promptData[categoryName]) { // Check if the category exists in the loaded data
+                    const category = promptData[categoryName];
+                    const orderedSubCategories = orderedCategories[categoryName];
 
-                card.innerHTML = `
+                    const card = document.createElement('div');
+                    card.className = 'prompt-block flex flex-col';
+
+                    let subCategoryLinks = orderedSubCategories.map(subName => {
+                        // Only create a link if the subcategory exists in the loaded data
+                        if (category[subName]) {
+                            return `<li><a href="#" class="block py-1.5 text-gray-500" data-category="${categoryName}" data-subcategory="${subName}">→ ${subName}</a></li>`;
+                        }
+                        return ''; // Return empty string if subcategory not found
+                    }).join('');
+
+                    card.innerHTML = `
                     <div class="p-6">
                         <h2 class="text-xl font-bold text-center main-heading">Gemini Prompts for <span class="accent-text">${categoryName}</span></h2>
                     </div>
@@ -322,6 +368,7 @@
                     </div>
                 `;
                 categoryCardsContainer.appendChild(card);
+                }
             }
         }
 
@@ -438,9 +485,28 @@
         function renderQuickLinks(activeCategory, activeSubCategory) {
             quickLinksSidebar.innerHTML = '';
             for (const categoryName in promptData) {
+                // Only include categories that have subcategories
+                if (Object.keys(promptData[categoryName]).length === 0) {
+                    continue;
+                }
+
                 const categoryTitle = document.createElement('h4');
                 categoryTitle.className = 'font-bold mt-4 mb-2 main-heading';
-                categoryTitle.innerHTML = `Gemini Prompts for <span class="accent-text">${categoryName}</span>`;
+
+                // Apply text formatting for visual distinction
+                let formattedCategoryName = '';
+                switch (categoryName) {
+                    case 'Writing': formattedCategoryName = `*${categoryName.toUpperCase()}*`; break;
+                    case 'Coding': formattedCategoryName = `**${categoryName.toUpperCase()}**`; break;
+                    case 'Learning': formattedCategoryName = `_${categoryName.toUpperCase()}_`; break;
+                    case 'Brainstorming': formattedCategoryName = `~~${categoryName.toUpperCase()}~~`; break;
+                    case 'Fun': formattedCategoryName = `\`${categoryName.toUpperCase()}\``; break;
+                    case 'Productivity': formattedCategoryName = `***${categoryName.toUpperCase()}***`; break;
+                    case 'Specialized': formattedCategoryName = `___${categoryName.toUpperCase()}___`; break;
+                    default: formattedCategoryName = categoryName.toUpperCase();
+                }
+
+                categoryTitle.innerHTML = `<span class="accent-text">${formattedCategoryName}</span>`;
                 quickLinksSidebar.appendChild(categoryTitle);
 
                 const subList = document.createElement('ul');
@@ -448,7 +514,18 @@
                     const li = document.createElement('li');
                     const link = document.createElement('a');
                     link.href = '#';
-                    link.textContent = subCategoryName;
+
+                    // Apply text formatting for subcategories
+                    let formattedSubCategoryName = '';
+                    switch (subCategoryName) {
+                        case 'Creative Writing': formattedSubCategoryName = `> ${subCategoryName}`; break;
+                        case 'Technical Writing': formattedSubCategoryName = `- ${subCategoryName}`; break;
+                        case 'Email & Communication': formattedSubCategoryName = `+ ${subCategoryName}`; break;
+                        case 'Summarization & Extraction': formattedSubCategoryName = `_ ${subCategoryName}`; break;
+                        default: formattedSubCategoryName = subCategoryName;
+                    }
+
+                    link.textContent = formattedSubCategoryName;
                     link.dataset.category = categoryName;
                     link.dataset.subcategory = subCategoryName;
                     // Highlight the active link
